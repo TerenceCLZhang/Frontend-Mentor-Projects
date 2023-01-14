@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+:root {
+  /*primary colours*/
+  --desaturated-red: hsl(0, 36%, 70%);
+  --soft-red: hsl(0, 93%, 68%);
+
+  /*neutral colours*/
+  --dark-grayish-red: hsl(0, 6%, 24%);
+
+  /*typography*/
+  --fs: 16px;
+
+  --ff: "Josefin Sans", sans-serif;
+
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-bold: 600;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  font-family: var(--ff);
+  font-weight: var(--fw-normal);
+  font-size: var(--fs);
+  color: var(--desaturated-red);
+  text-align: center;
+  background-image: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%),
+    hsl(0, 100%, 98%)
+  );
+  background-attachment: fixed;
+}
+
+h1 {
+  font-weight: var(--fw-light);
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  letter-spacing: 0.5rem;
+}
+
+h1 > span {
+  display: block;
+}
+
+h1 > .highlighted-title {
+  color: var(--dark-grayish-red);
+  font-weight: var(--fw-bold);
+}
+
+.card {
+  display: grid;
+  grid-template-rows: auto auto auto;
+}
+
+.logo {
+  margin: 2rem;
+  width: 30%;
+}
+
+.hero > img {
+  margin-bottom: 3rem;
+  width: 100vw;
+}
+
+.card-description {
+  margin: 0rem 1.5rem 2rem 1.5rem;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="email"] {
+  border-radius: 2rem;
+  width: 80vw;
+  padding: 1rem 25% 1rem 1.5rem;
+  background-color: transparent;
+  border: 1px solid var(--desaturated-red);
+  color: var(--desaturated-red);
+  opacity: 75%;
+  margin-bottom: 2rem;
+}
+
+input[type="email"]::placeholder {
+  color: var(--desaturated-red);
+}
+
+.error-icon {
+  background-image: url("images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-position: right 115px top 50%;
+  padding-right: 150px !important;
+}
+
+#submit {
+  position: absolute;
+  right: 10vw;
+  top: 0;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  cursor: pointer;
+  border: none;
+  height: calc(100% - 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  border-radius: 2rem;
+  box-shadow: 0px 10px 20px 1px hsl(0, 80%, 86%);
+}
+
+.error-message {
+  color: var(--soft-red);
+  text-align: left;
+  margin-left: 4.75rem;
+  margin-bottom: 2rem !important;
+}
+
+.input-error {
+  outline: none !important;
+  border-color: var(--soft-red) !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.submit-error {
+  height: calc(100% - 0.5rem) !important;
+}
+
+@media (min-width: 50em) {
+  body {
+    text-align: left;
+    background-image: url("images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 55% 100%;
+  }
+
+  h1 {
+    font-size: 4rem;
+    line-height: 4.5rem;
+    margin: 0 0 2rem 0;
+  }
+
+  .card {
+    grid-row-gap: 2rem;
+  }
+
+  .logo {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    margin: 5rem auto 5rem 20%;
+  }
+
+  .card {
+    grid-template-columns: 1fr 0.85fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .card-content {
+    margin-left: 20%;
+    margin-right: 15%;
+  }
+
+  .card-description {
+    margin-left: 0;
+    margin-bottom: 2rem;
+  }
+
+  .hero {
+    display: block;
+    height: 100vh;
+    width: 100%;
+    content: url(images/hero-desktop.jpg);
+    grid-row: 1 / 3;
+    grid-column: 2 / 3;
+  }
+
+  .input-container {
+    display: block;
+  }
+
+  input[type="email"] {
+    width: 100%;
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+  }
+
+  #submit {
+    right: 0;
+    top: 0;
+  }
+
+  .error-message {
+    margin-left: 1.5rem;
+  }
+}

@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+:root {
+  --orange: hsl(25, 97%, 53%);
+
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-gray: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+
+  --fs: 15px;
+
+  --ff: "Overpass", sans-serif;
+
+  --fw-normal: 500;
+  --fw-bold: 700;
+
+  --content-margin-bottom: 1rem;
+  --max-width: 380;
+  --max-height: 400px;
+  --background-color: linear-gradient(
+    to top,
+    hsl(220, 16%, 11%),
+    hsl(213, 10%, 17%)
+  );
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  background-color: var(--very-dark-blue);
+  font-family: var(--ff);
+  font-weight: var(--fw-normal);
+  font-size: var(--fs);
+  color: var(--light-grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0rem 2rem;
+}
+
+h1 {
+  color: var(--white);
+  margin-bottom: var(--content-margin-bottom);
+  font-weight: var(--fw-bold);
+  font-size: 1.75rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  background-image: var(--background-color);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90vw;
+  height: 60vh;
+  max-width: var(--max-width);
+  max-height: var(--max-height);
+}
+
+/*Rating State Styles*/
+.rating-state {
+  padding: 1.75rem 1.5rem;
+}
+
+.rating-state-star {
+  background-color: var(--dark-blue);
+  border-radius: 50%;
+  padding: 0.75rem;
+  margin-bottom: var(--content-margin-bottom);
+}
+
+.rating-state-description {
+  margin: 0rem 0rem 2rem 0rem;
+}
+
+.rating-state-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.rating-state-buttons > button {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--dark-blue);
+  outline: none;
+  border: none;
+  color: var(--light-grey);
+}
+
+.rating-state-buttons > button:hover {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.rating-state-buttons > button:focus {
+  background-color: var(--light-grey);
+  color: var(--white);
+}
+
+.rating-state-submit-button {
+  width: 100%;
+  background-color: var(--orange);
+  border-radius: 30px;
+  padding: 0.8rem;
+  text-transform: uppercase;
+  color: var(--white);
+  outline: none;
+  border: none;
+  letter-spacing: 0.15rem;
+}
+
+.rating-state-submit-button:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+/*Thank You State Styles*/
+
+.thank-you-state {
+  text-align: center;
+  display: none;
+  padding: 2.25rem 1.5rem;
+}
+
+.thank-you-state-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+  width: 50%;
+}
+
+.thank-you-state-rating {
+  background-color: var(--dark-blue);
+  border-radius: 30px;
+  color: var(--orange);
+  margin-bottom: var(--content-margin-bottom);
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1.5rem 0.25rem 1.5rem;
+}
+
+.thank-you-state-rating-number {
+  margin: 0 0.3rem;
+}
