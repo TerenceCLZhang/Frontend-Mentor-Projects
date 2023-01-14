@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+
+  --fw-500: 500;
+  --fw-700: 700;
+
+  --ff-montserrat: "Montserrat", sans-serif;
+  --ff-fraunces: "Fraunces", serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  font-family: var(--ff-montserrat);
+  font-weight: var(--fw-500);
+  color: var(--dark-grayish-blue);
+  font-size: 14px;
+  background-color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0rem 1.5rem;
+}
+
+.product {
+  --content-padding: 1rem;
+  --content-spacing: 1rem;
+
+  --big-font-size: 2rem;
+  --big-font-family: var(--ff-fraunces);
+
+  display: grid;
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-width: 600px;
+}
+
+@media (min-width: 600px) {
+  .product {
+    --content-padding: 2rem;
+
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .product-image > img {
+    height: 100%;
+  }
+}
+
+.product-content {
+  padding: var(--content-padding);
+  display: grid;
+  gap: var(--content-spacing);
+}
+
+.product-type {
+  font-size: 0.75rem;
+  letter-spacing: 5px;
+}
+
+.product-name {
+  font-size: var(--big-font-size);
+  font-family: var(--big-font-family);
+  color: var(--very-dark-blue);
+  line-height: 1;
+}
+
+.prices {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.current-price {
+  font-size: 2rem;
+  font-family: var(--ff-fraunces);
+  color: var(--dark-cyan);
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.add-to-cart-button::before {
+  content: "";
+  width: 15px;
+  height: 16px;
+  background-image: url("images/icon-cart.svg");
+}
+
+.add-to-cart-button {
+  display: inline-flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding: 0.75rem 2rem;
+  font-weight: var(--fw-700);
+}
+
+.add-to-cart-button:is(:hover, :focus) {
+  background-color: var(--very-dark-blue);
+}

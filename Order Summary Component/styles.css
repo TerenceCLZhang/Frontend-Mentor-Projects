@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  /*primary colours*/
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+
+  /*neutral colours */
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+
+  /*extra colours*/
+  --bright-blue-hover: hsl(245, 64%, 63%);
+  --container-shadow: hsl(224, 93%, 89%);
+  --proceed-to-payment-shadow: hsl(244, 41%, 85%);
+
+  /*typography*/
+  --fs: 1rem;
+  --fs-small: 0.85rem;
+
+  --ff: "Red Hat Display", sans-serif;
+
+  --fw-normal: 500;
+  --fw-bold: 700;
+  --fw-extra-bold: 900;
+
+  /*other*/
+  --border-radius: 1rem;
+  --content-margin-bottom: 1rem;
+}
+
+/*CSS reset*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*Main Styles*/
+
+body {
+  background-image: url("images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: var(--ff);
+  font-weight: var(--fw-normal);
+  font-size: var(--fs);
+  color: var(--desaturated-blue);
+  background-color: var(--pale-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 500px) {
+  body {
+    background-image: url("images/pattern-background-desktop.svg");
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  background-color: white;
+  margin: 1.5rem;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  max-width: 450px;
+  box-shadow: var(--container-shadow) 0px 1px 1px,
+    var(--container-shadow) 0px 2px 2px, var(--container-shadow) 0px 4px 4px,
+    var(--container-shadow) 0px 8px 8px, var(--container-shadow) 0px 16px 16px;
+}
+
+.container-content {
+  padding: 3rem;
+}
+
+.order-summary {
+  color: var(--dark-blue);
+  font-weight: var(--fw-extra-bold);
+  font-size: 2rem;
+  margin-bottom: var(--content-margin-bottom);
+}
+
+.description {
+  margin-bottom: var(--content-margin-bottom);
+}
+
+.purchase-options {
+  background-color: var(--very-pale-blue);
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.purchase-options-left {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.purchase-options-right {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.current-plan {
+  font-size: var(--fs-small);
+  text-align: left;
+}
+
+.plan-name {
+  color: var(--dark-blue);
+  font-weight: var(--fw-extra-bold);
+}
+
+.change-plan {
+  font-weight: var(--fw-bold);
+  font-size: 0.825rem;
+  color: var(--bright-blue);
+}
+
+.change-plan:hover {
+  color: var(--bright-blue-hover);
+  text-decoration: none;
+}
+
+.proceed-to-payment-btn {
+  background-color: var(--bright-blue);
+  color: white;
+  font-weight: var(--fw-bold);
+  border: none;
+  outline: none;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  display: block;
+  width: 100%;
+  margin-bottom: 1.25rem;
+  box-shadow: var(--proceed-to-payment-shadow) 0px 1px 1px,
+    var(--proceed-to-payment-shadow) 0px 2px 2px,
+    var(--proceed-to-payment-shadow) 0px 4px 4px,
+    var(--proceed-to-payment-shadow) 0px 8px 8px,
+    var(--proceed-to-payment-shadow) 0px 16px 16px;
+}
+
+.proceed-to-payment-btn:hover {
+  background-color: var(--bright-blue-hover);
+}
+
+.cancel-order-btn {
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--desaturated-blue);
+  font-weight: var(--fw-extra-bold);
+  font-size: var(--fs-small);
+}
+
+.cancel-order-btn:hover {
+  color: hsl(223, 19%, 18%);
+}

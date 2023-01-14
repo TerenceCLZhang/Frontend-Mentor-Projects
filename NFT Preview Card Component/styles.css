@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  --very-dark-blue-main: hsl(217, 54%, 11%);
+  --very-dark-blue-card: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+
+  --font: "Outfit", sans-serif;
+
+  --fw-thin: 300;
+  --fw-normal: 400;
+  --fw-bold: 600;
+
+  --content-margin: 0rem 0rem 0.95rem 0rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  background-color: var(--very-dark-blue-main);
+  color: var(--white);
+  font-family: var(--font);
+  font-weight: var(--fw-normal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--very-dark-blue-line);
+  margin: var(--content-margin);
+}
+
+.nft-card {
+  background-color: var(--very-dark-blue-card);
+  color: var(--soft-blue);
+  margin: 0rem 1.5rem;
+  padding: 1.75rem;
+  border-radius: 1rem;
+  line-height: 1.5rem;
+  max-width: 335px;
+}
+
+.equilibrium-image {
+  border-radius: 1rem;
+  margin: 0rem 0rem 1.5rem 0rem;
+}
+
+.nft-name {
+  color: var(--white);
+  font-size: 1.45rem;
+  font-weight: var(--fw-bold);
+  margin: var(--content-margin);
+}
+
+.nft-description {
+  font-weight: var(--fw-thin);
+  margin: var(--content-margin);
+}
+
+.nft-details,
+.nft-details > *,
+.nft-creator {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.nft-details {
+  margin: var(--content-margin);
+  justify-content: space-between;
+}
+
+.nft-cost {
+  color: var(--cyan);
+}
+
+.nft-creator {
+  gap: 1rem;
+}
+
+.avatar {
+  border: 1.5px solid var(--white);
+  border-radius: 50%;
+  width: 35px;
+}
+
+.creator {
+  color: var(--white);
+}

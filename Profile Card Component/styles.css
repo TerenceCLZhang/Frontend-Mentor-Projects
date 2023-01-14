@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  /*primary colours */
+  --background: hsl(185, 75%, 39%);
+  --main-font: hsl(229, 23%, 23%);
+  --sub-font: hsl(227, 10%, 46%);
+
+  /*neutral colours */
+  --dark-gray: hsl(0, 0%, 59%);
+
+  /*typography*/
+  --fs: 18px;
+
+  --ff: "Kumbh Sans", sans-serif;
+
+  --fw-normal: 400;
+  --fw-bold: 700;
+
+  /*other*/
+  --content-margin-bottom: 1.5rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  background: url("images/bg-pattern-top.svg") right 48vw bottom 40vh,
+    url("images/bg-pattern-bottom.svg") left 45vw top 44vh;
+  background-repeat: no-repeat, no-repeat;
+  background-color: var(--background);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: var(--ff) !important;
+  font-weight: var(--fw-normal);
+  font-size: var(--fs);
+  text-align: center;
+  color: var(--main-font);
+  min-height: 100vh;
+}
+
+hr {
+  border-top: 1px solid var(--dark-gray) !important;
+  opacity: 50%;
+  border: 0;
+}
+
+.card {
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin: 2rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.card-info > div:not(:last-child),
+hr {
+  margin-bottom: var(--content-margin-bottom);
+}
+
+.background-pattern {
+  position: relative;
+}
+
+.profile-img {
+  border-radius: 50%;
+  border: 5px solid white;
+  position: relative;
+  top: -55px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -4rem;
+}
+
+.details {
+  margin-top: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.name-age {
+  position: relative;
+}
+
+.name-age > * {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.age {
+  color: var(--dark-gray);
+}
+
+.location {
+  font-size: 0.95rem;
+}
+
+.name,
+.stat-number {
+  font-weight: var(--fw-bold);
+}
+
+.age,
+.location,
+.stat-header {
+  color: var(--sub-font);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.stat-header {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+}
