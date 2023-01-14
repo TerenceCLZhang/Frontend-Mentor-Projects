@@ -179,9 +179,14 @@ input[type="email"]::placeholder {
 @media (min-width: 50em) {
   body {
     text-align: left;
-    background-image: url("images/bg-pattern-desktop.svg");
+    background: url("images/bg-pattern-desktop.svg");
     background-repeat: no-repeat;
-    background-size: 55% 100%;
+    background-size: 60% 100%;
+    background-color: linear-gradient(
+      135deg,
+      hsl(0, 80%, 86%),
+      hsl(0, 74%, 74%)
+    );
   }
 
   h1 {
@@ -201,13 +206,13 @@ input[type="email"]::placeholder {
   }
 
   .card {
-    grid-template-columns: 1fr 0.85fr;
+    grid-template-columns: 1fr 0.75fr;
     grid-template-rows: auto 1fr;
   }
 
   .card-content {
     margin-left: 20%;
-    margin-right: 15%;
+    margin-right: 20%;
   }
 
   .card-description {
