@@ -179,14 +179,10 @@ input[type="email"]::placeholder {
 @media (min-width: 50em) {
   body {
     text-align: left;
-    background: url("images/bg-pattern-desktop.svg");
+    background: url("images/bg-pattern-desktop.svg"),
+      linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
     background-repeat: no-repeat;
     background-size: 60% 100%;
-    background-color: linear-gradient(
-      135deg,
-      hsl(0, 80%, 86%),
-      hsl(0, 74%, 74%)
-    );
   }
 
   h1 {
