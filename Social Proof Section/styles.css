@@ -112,7 +112,7 @@ h1 {
 .review-box {
   background-color: var(--very-dark-magenta);
   color: var(--white);
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   padding: 2rem;
   margin-bottom: 1rem;
 }
