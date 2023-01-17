@@ -151,7 +151,6 @@ h1 {
   body {
     background-image: url("images/bg-pattern-top-desktop.svg"),
       url("images/bg-pattern-bottom-desktop.svg");
-    background-position: left top, right bottom;
     background-size: 50% 50%, 80% 80%;
     font-size: 1rem;
   }
