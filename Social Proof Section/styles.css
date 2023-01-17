@@ -66,8 +66,11 @@ body {
   font-size: var(--fs);
   font-weight: var(--fw-normal);
   color: var(--dark-grayish-magenta);
-  background: url("images/bg-pattern-top-mobile.svg") left top no-repeat,
-    url("images/bg-pattern-bottom-mobile.svg") right bottom no-repeat;
+  background-image: url("images/bg-pattern-top-mobile.svg"),
+    url("images/bg-pattern-bottom-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: left top, right bottom;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -148,6 +151,8 @@ h1 {
   body {
     background-image: url("images/bg-pattern-top-desktop.svg"),
       url("images/bg-pattern-bottom-desktop.svg");
+    background-position: left top, right bottom;
+    background-size: 50% 50%, 80% 80%;
     font-size: 1rem;
   }
 
