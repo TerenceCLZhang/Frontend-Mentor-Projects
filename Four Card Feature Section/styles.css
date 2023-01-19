@@ -68,12 +68,12 @@ body {
   font-size: var(--fs);
   font-weight: var(--fw-normal);
   background-color: var(--very-light-gray);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   color: var(--grayish-blue);
   margin: 3.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
