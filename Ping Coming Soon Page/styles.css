@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+:root {
+  /*colours */
+  --blue: hsl(223, 87%, 63%);
+
+  --pale-blue: hsl(223, 100%, 88%);
+  --light-red: hsl(354, 100%, 66%);
+
+  --gray: hsl(0, 0%, 59%);
+  --very-dark-blue: hsl(209, 33%, 12%);
+
+  /*typography*/
+  --ff: "Libre Franklin", sans-serif;
+
+  --fw-light: 300;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  font-family: var(--ff);
+  font-weight: var(--fw-light);
+  color: var(--very-dark-blue);
+  margin: auto 2rem;
+  text-align: center;
+  margin: 5rem 2rem 0 2rem;
+  max-width: 600px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "email-input" "error-message" "submit-button";
+  row-gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+main {
+  display: grid;
+  row-gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+footer {
+  display: grid;
+  row-gap: 1rem;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: var(--fw-light);
+  color: var(--gray);
+  margin-bottom: 0.75rem;
+}
+
+h2 {
+  font-size: 0.875rem;
+}
+
+svg {
+  cursor: pointer;
+  fill: var(--blue);
+}
+
+.logo {
+  display: flex;
+  margin: 0 auto;
+  width: 4rem;
+}
+
+.h1-highlight {
+  font-weight: var(--fw-bold);
+  color: var(--very-dark-blue);
+}
+
+input[type="email"],
+input[type="submit"] {
+  border-radius: 2rem;
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.5rem 2rem;
+}
+
+input[type="email"] {
+  border: 2px solid var(--pale-blue);
+  grid-area: email-input;
+}
+
+.email-error {
+  border-color: var(--light-red) !important;
+}
+
+.error-text {
+  margin-top: -0.25rem;
+  margin-bottom: 0.5rem;
+  color: red;
+  font-style: italic;
+  font-size: 0.825rem;
+  grid-area: error-message;
+}
+
+input[type="submit"] {
+  border: none;
+  background-color: var(--blue);
+  color: white;
+  font-weight: var(--fw-semi-bold);
+  cursor: pointer;
+  box-shadow: 0 5px 20px var(--pale-blue);
+  grid-area: submit-button;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.icons > div {
+  border: 1px solid var(--pale-blue);
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 10px;
+}
+
+.facebook > a > svg {
+  width: 10px;
+}
+
+.copyright {
+  font-size: 0.75rem;
+  color: var(--gray);
+}
+
+@media (min-width: 50em) {
+  form {
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-areas: "email-input submit-button" "error-message .";
+    column-gap: 1rem;
+    row-gap: 1rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 0.25rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+}
