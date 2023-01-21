@@ -114,6 +114,7 @@ h1 {
 
 h2 {
   font-size: 0.875rem;
+  font-weight: var(--fw-normal);
 }
 
 svg {
