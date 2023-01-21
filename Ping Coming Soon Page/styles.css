@@ -207,4 +207,8 @@ input[type="submit"] {
   h2 {
     font-size: 1.25rem;
   }
+
+  .logo {
+    width: 6rem;
+  }
 }
