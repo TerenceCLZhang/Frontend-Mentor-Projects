@@ -91,8 +91,7 @@ header {
 
 main {
   display: grid;
-  row-gap: 2rem;
-  margin: auto 1.25rem;
+  row-gap: 3rem;
 }
 
 footer {
@@ -163,8 +162,13 @@ input[type="email"]::placeholder {
   grid-area: error-message;
 }
 
+main > div {
+  display: grid;
+  row-gap: 2rem;
+  margin: auto 1.2rem;
+}
+
 .dashboard-img {
-  margin-top: 8vh;
   margin-bottom: 17vh;
 }
 
@@ -235,10 +239,11 @@ input[type="submit"] {
 
   main {
     margin: 0;
+    row-gap: 0.3rem;
   }
 
   .container {
-    padding: 3rem 0 1rem 0;
+    padding: 5rem 0 1rem 0;
   }
 
   .logo {
@@ -252,7 +257,6 @@ input[type="submit"] {
   }
 
   .dashboard-img {
-    margin-top: 1vh;
     margin-bottom: 10vh;
   }
 }
