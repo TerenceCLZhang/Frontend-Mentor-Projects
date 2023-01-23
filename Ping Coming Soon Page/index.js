@@ -30,22 +30,3 @@ form.addEventListener("submit", (event) => {
     form.submit();
   }
 });
-
-const icons = document.querySelector(".icons");
-const iconDivs = icons.querySelectorAll("div");
-
-for (let i = 0; i < iconDivs.length; i++) {
-  const currentDiv = iconDivs[i];
-
-  currentDiv.addEventListener("mouseover", function () {
-    const iconSVG = currentDiv.querySelector("svg");
-    iconSVG.classList.add("svg-hover-colour");
-    currentDiv.classList.add("icons-hover");
-  });
-
-  currentDiv.addEventListener("mouseout", function () {
-    const iconSVG = currentDiv.querySelector("svg");
-    iconSVG.classList.remove("svg-hover-colour");
-    currentDiv.classList.remove("icons-hover");
-  });
-}

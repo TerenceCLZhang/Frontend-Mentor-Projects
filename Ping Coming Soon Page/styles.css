@@ -188,15 +188,6 @@ input[type="submit"] {
   gap: 1rem;
 }
 
-.icons-hover {
-  background-color: var(--blue);
-  border: none !important;
-}
-
-.svg-hover-colour {
-  color: white !important;
-}
-
 .icons > div {
   border: 1px solid var(--pale-blue);
   border-radius: 50%;
@@ -204,6 +195,15 @@ input[type="submit"] {
   height: 2.5rem;
   padding: 10px;
   cursor: pointer;
+}
+
+.icons > div:hover {
+  background-color: var(--blue);
+  border: none;
+}
+
+.icons > div:hover > a > svg {
+  color: white;
 }
 
 .facebook > a > svg {
