@@ -1,0 +1,17 @@
+@import "./variables";
+
+.advice-number {
+  color: $neon-green;
+  font-size: 1rem;
+  margin-bottom: $margin-bottom;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+}
+
+blockquote {
+  margin-bottom: $margin-bottom;
+}
+
+#advice {
+  color: $light-cyan;
+}

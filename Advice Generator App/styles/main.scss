@@ -1,0 +1,30 @@
+@import "./cssReset";
+@import "./variables";
+@import "./advice";
+@import "./button";
+
+body {
+  background-color: $dark-blue;
+  font-family: $ff;
+  font-size: $fs;
+  font-weight: $fw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2rem;
+}
+
+.card {
+  background-color: $dark-grayish-blue;
+  text-align: center;
+  padding: 2.5rem 2rem 4.5rem 2rem;
+  position: relative;
+  border-radius: 1rem;
+  max-width: 550px;
+
+  .divider {
+    margin: 0 auto;
+  }
+}

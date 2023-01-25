@@ -1,0 +1,127 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+.advice-number {
+  color: hsl(150deg, 100%, 66%);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+}
+
+blockquote {
+  margin-bottom: 1rem;
+}
+
+#advice {
+  color: hsl(193deg, 38%, 86%);
+}
+
+#get-advice {
+  background-color: hsl(150deg, 100%, 66%);
+  border: none;
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: -25px;
+}
+
+#get-advice:hover {
+  filter: brightness(125%);
+  box-shadow: 0 0 20px hsl(150deg, 100%, 66%);
+}
+
+body {
+  background-color: hsl(218deg, 23%, 16%);
+  font-family: "Manrope", sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.card {
+  background-color: hsl(217deg, 19%, 24%);
+  text-align: center;
+  padding: 2.5rem 2rem 4.5rem 2rem;
+  position: relative;
+  border-radius: 1rem;
+  max-width: 550px;
+}
+.card .divider {
+  margin: 0 auto;
+}/*# sourceMappingURL=main.css.map */

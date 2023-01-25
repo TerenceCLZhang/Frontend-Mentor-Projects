@@ -1,0 +1,19 @@
+@import "./variables";
+
+#get-advice {
+  background-color: $neon-green;
+  border: none;
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: -25px;
+}
+
+#get-advice:hover {
+  filter: brightness(125%);
+  box-shadow: 0 0 20px $neon-green;
+}
