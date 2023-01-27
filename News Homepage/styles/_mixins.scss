@@ -1,0 +1,6 @@
+@mixin articleHeader($hederColour, $fontSize) {
+  font-size: $fontSize;
+  color: $hederColour;
+  font-weight: $fw-bold;
+  text-decoration: none;
+}

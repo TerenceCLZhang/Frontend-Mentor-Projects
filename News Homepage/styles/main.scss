@@ -1,0 +1,43 @@
+@import "./cssReset";
+@import "./variables";
+@import "./mixins";
+@import "./headerStyles";
+@import "./featureSectionStyles";
+@import "./newSectionStyles";
+@import "./otherSectionStyles";
+
+body {
+  background: $background-colour;
+  font-family: $ff;
+  font-weight: $fw-normal;
+  font-size: $fs;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.page-container {
+  padding: 5vh 5vw;
+}
+
+@media (min-width: 50em) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      "feature-article feature-article new-articles"
+      "feature-article feature-article new-articles"
+      "other-articles other-articles other-articles";
+    padding-top: 2rem;
+    column-gap: 2rem;
+    row-gap: 3rem;
+  }
+
+  .page-container {
+    padding: 10vh 10vw;
+  }
+}

@@ -1,0 +1,75 @@
+.feature-article {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  picture {
+    object-fit: contain;
+  }
+
+  .feature-article-contents {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .feature-article-title {
+      font-size: 3rem;
+      font-weight: $fw-extra-bold;
+      line-height: 1.1;
+    }
+
+    .feature-article-preview {
+      color: $dark-grayish-blue;
+      line-height: 1.75;
+    }
+
+    .read-more-btn {
+      background-color: $soft-red;
+      border: none;
+      color: $off-white;
+      text-transform: uppercase;
+      letter-spacing: 0.15rem;
+      font-weight: $fw-bold;
+      padding: 1rem 2rem;
+      cursor: pointer;
+      margin: 0 auto 0 0;
+    }
+
+    .read-more-btn:hover {
+      background-color: $very-dark-blue;
+    }
+  }
+}
+
+@media (min-width: 50em) {
+  .feature-article {
+    grid-area: feature-article;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+
+    .feature-article-contents {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(2, auto);
+      grid-template-areas: "title preview" "title button";
+      column-gap: 2rem;
+
+      .feature-article-title {
+        font-size: 3.5rem;
+        grid-area: title;
+      }
+
+      .feature-article-preview {
+        grid-area: preview;
+        color: $dark-grayish-blue;
+      }
+
+      .read-more-btn {
+        grid-area: button;
+        align-self: end;
+        justify-self: left;
+        grid-area: button;
+      }
+    }
+  }
+}
