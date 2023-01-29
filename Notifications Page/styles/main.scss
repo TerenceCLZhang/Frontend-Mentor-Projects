@@ -1,0 +1,33 @@
+@import "./cssReset";
+@import "./variables";
+@import "./headerStyles";
+@import "./mainStyles";
+@import "./activeStates";
+
+body {
+  font-family: $ff;
+  font-size: $fs;
+  font-weight: $fw-medium;
+  color: $very-dark-blue;
+
+  display: flex;
+  justify-content: center;
+}
+
+.page-container {
+  padding: 1rem;
+}
+
+@media (min-width: 50em) {
+  body {
+    background-color: $very-light-grayish-blue;
+    padding: 5rem;
+  }
+
+  .page-container {
+    background-color: $white;
+    border-radius: 1.5rem;
+    padding: 3rem;
+    max-width: 750px;
+  }
+}

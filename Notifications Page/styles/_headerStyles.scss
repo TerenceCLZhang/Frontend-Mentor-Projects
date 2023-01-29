@@ -1,0 +1,35 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+
+  div {
+    display: flex;
+    gap: 0.5rem;
+  }
+}
+
+h1 {
+  font-size: 1.35em;
+  font-weight: $fw-extra-bold;
+}
+
+.number {
+  background-color: $blue;
+  color: $white;
+  font-weight: $fw-extra-bold;
+  width: 35px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  align-self: center;
+}
+
+#mark-all-as-read-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: $grayish-blue;
+}

@@ -1,0 +1,10 @@
+#mark-all-as-read-btn:hover,
+.name:hover,
+.post-title:hover {
+  color: $blue;
+}
+
+.private-message:hover {
+  background-color: $light-grayish-blue2;
+  cursor: pointer;
+}
