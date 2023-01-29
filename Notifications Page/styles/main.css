@@ -145,6 +145,10 @@ main {
   height: 50px;
 }
 
+.shared-image {
+  margin-left: auto;
+}
+
 a {
   text-decoration: none;
   color: hsl(224deg, 21%, 14%);
@@ -203,7 +207,7 @@ body {
 @media (min-width: 50em) {
   body {
     background-color: hsl(210deg, 60%, 98%);
-    padding: 5rem;
+    padding: 4rem;
   }
   .page-container {
     background-color: hsl(0deg, 0%, 100%);
