@@ -141,7 +141,7 @@ header img {
 @media (min-width: 70em) {
   header {
     padding: 0;
-    width: 50vw;
+    width: 40vw;
     height: 100vh;
     background-image: url("../images/bg-main-desktop.png");
     position: relative;
@@ -152,7 +152,7 @@ header img {
   }
   .eg-card .card-front {
     top: 25vh;
-    left: 18vw;
+    left: 15vw;
   }
   .eg-card .card-back {
     top: 55vh;
@@ -172,7 +172,7 @@ header img {
   }
   .eg-card-info-front {
     top: 25vh;
-    left: 18vw;
+    left: 15vw;
   }
   .eg-card-info-front .logo {
     width: 80px;
