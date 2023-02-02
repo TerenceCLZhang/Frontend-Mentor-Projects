@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header>
+      <div class="eg-card">
+        <img src="/images/bg-card-back.png" alt="card back" class="card-back" />
+        <img
+          src="/images/bg-card-front.png"
+          alt="card front"
+          class="card-front"
+        />
+        <div class="eg-card-info-front">
+          <img src="/images/card-logo.svg" alt="card-logo" class="logo" />
+          <p class="eg-card-num">0000 0000 0000 0000</p>
+          <p class="eg-card-name">Jane Appleseed</p>
+          <p class="eg-card-expiry-date">00/00</p>
+        </div>
+        <div class="eg-card-info-back">
+          <p class="eg-card-cvc">000</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <form action="#" onsubmit="return validateForm()" novalidate>
+        <div class="card-name">
+          <label for="cardholder-name">Cardholder Name</label>
+          <input
+            type="text"
+            name="cardholder-name"
+            id="cardholder-name"
+            placeholder="e.g. Jane Appleseed"
+          />
+        </div>
+
+        <div class="card-number">
+          <label for="card-number">Card Number</label>
+          <input
+            type="pattern"
+            name="card-number"
+            id="card-number"
+            placeholder="e.g. 1234 5678 9123 0000"
+          />
+        </div>
+
+        <div class="card-other-info">
+          <div class="date">
+            <label for="date">Exp. Date (MM/YY)</label>
+            <div>
+              <input
+                type="number"
+                name="date"
+                id="date-month"
+                placeholder="MM"
+              />
+              <input
+                type="number"
+                name="date"
+                id="date-year"
+                placeholder="YY"
+              />
+            </div>
+          </div>
+
+          <div class="cvc">
+            <label for="cvc">CVC</label>
+            <input type="number" name="cvc" id="cvc" placeholder="e.g. 123" />
+          </div>
+        </div>
+
+        <input type="submit" value="Confirm" />
+      </form>
+
+      <!-- Completed state start -->
+      <div class="completed-state">
+        <img src="images/icon-complete.svg" alt="complete" />
+        <h1>Thank you!</h1>
+        <p>We've added your card details</p>
+        <button id="completed-state-button">Continue</button>
+      </div>
+    </main>
+
+    <script src="scripts/charRestrict.js"></script>
+    <script src="scripts/validation.js"></script>
+    <script src="scripts/numberInputValidation.js"></script>
+    <script src="scripts/handleFormSubmit.js"></script>
+    <script src="scripts/formatCardNumber.js"></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+.completed-state {
+  text-align: center;
+  display: none;
+
+  img {
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-weight: $fw;
+    text-transform: uppercase;
+  }
+
+  p {
+    color: $dark-grayish-violet;
+  }
+
+  button {
+    @include button(3rem);
+    width: 100%;
+  }
+}

@@ -1,0 +1,19 @@
+@import "./cssReset";
+@import "./varaibles";
+@import "./headerStyles";
+@import "./mainStyles";
+@import "./completedState";
+
+body {
+  font-size: $fs;
+  font-family: $ff;
+  font-weight: $fw;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 70em) {
+  body {
+    flex-direction: row;
+  }
+}

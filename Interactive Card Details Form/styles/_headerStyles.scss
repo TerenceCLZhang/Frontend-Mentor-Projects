@@ -1,0 +1,142 @@
+header {
+  height: 225px;
+  color: $white;
+  background-image: url("../images/bg-main-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2rem 1rem;
+
+  img {
+    position: absolute;
+  }
+}
+
+.eg-card {
+  position: relative;
+
+  .card-front,
+  .card-back {
+    width: 275px;
+  }
+
+  .card-front {
+    top: 85px;
+    left: 0;
+  }
+
+  .card-back {
+    right: 0;
+  }
+}
+
+.eg-card-info-front,
+.eg-card-info-back {
+  position: relative;
+  position: absolute;
+  padding: 1rem;
+  width: 275px;
+  height: 150.72px;
+}
+
+.eg-card-info-front {
+  top: 85px;
+  left: 0;
+
+  & > * {
+    position: absolute;
+  }
+
+  .logo {
+    width: 70px;
+  }
+
+  .eg-card-num {
+    top: 75px;
+  }
+
+  .eg-card-name {
+    bottom: 1rem;
+  }
+
+  .eg-card-expiry-date {
+    right: 1rem;
+    bottom: 1rem;
+  }
+}
+
+.eg-card-info-back {
+  top: 0;
+  right: 0;
+
+  .eg-card-cvc {
+    position: absolute;
+    top: 60px;
+    right: 30px;
+  }
+}
+
+@media (min-width: 70em) {
+  header {
+    padding: 0;
+    width: 50vw;
+    height: 100vh;
+    background-image: url("../images/bg-main-desktop.png");
+    position: relative;
+  }
+
+  .eg-card {
+    .card-front,
+    .card-back {
+      width: 350px;
+    }
+
+    .card-front {
+      top: 30vh;
+      left: 15vw;
+    }
+
+    .card-back {
+      top: 55vh;
+      left: 20vw;
+    }
+
+    p {
+      font-size: 1rem;
+      white-space: nowrap;
+      letter-spacing: 4px;
+    }
+  }
+
+  .eg-card-info-front,
+  .eg-card-info-back {
+    position: absolute;
+    width: 350px;
+    height: 191.83px;
+    padding: 1.75rem;
+  }
+
+  .eg-card-info-front {
+    top: 30vh;
+    left: 15vw;
+
+    .logo {
+      width: 80px;
+    }
+
+    .eg-card-num {
+      font-size: 1.2rem;
+      top: 100px;
+    }
+  }
+
+  .eg-card-info-back {
+    top: 55vh;
+    left: 20vw;
+
+    .eg-card-cvc {
+      position: absolute;
+      top: 83px;
+      right: 40px;
+    }
+  }
+}
