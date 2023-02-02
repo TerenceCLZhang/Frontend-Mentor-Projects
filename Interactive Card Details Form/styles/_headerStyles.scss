@@ -20,12 +20,12 @@ header {
   }
 
   .card-front {
-    top: 85px;
-    left: 0;
+    top: $card-front-pos-top-mobile;
+    left: $card-front-pos-left-mobile;
   }
 
   .card-back {
-    right: 0;
+    right: $card-back-pos-right-mobile;
   }
 }
 
@@ -39,8 +39,8 @@ header {
 }
 
 .eg-card-info-front {
-  top: 85px;
-  left: 0;
+  top: $card-front-pos-top-mobile;
+  left: $card-front-pos-left-mobile;
 
   & > * {
     position: absolute;
@@ -91,13 +91,13 @@ header {
     }
 
     .card-front {
-      top: 30vh;
-      left: 15vw;
+      top: $card-front-pos-top-desktop;
+      left: $card-front-pos-left-desktop;
     }
 
     .card-back {
-      top: 55vh;
-      left: 20vw;
+      top: $card-back-pos-top-desktop;
+      left: $card-back-pos-left-desktop;
     }
 
     p {
@@ -116,8 +116,8 @@ header {
   }
 
   .eg-card-info-front {
-    top: 30vh;
-    left: 15vw;
+    top: $card-front-pos-top-desktop;
+    left: $card-front-pos-left-desktop;
 
     .logo {
       width: 80px;
@@ -130,8 +130,8 @@ header {
   }
 
   .eg-card-info-back {
-    top: 55vh;
-    left: 20vw;
+    top: $card-back-pos-top-desktop;
+    left: $card-back-pos-left-desktop;
 
     .eg-card-cvc {
       position: absolute;

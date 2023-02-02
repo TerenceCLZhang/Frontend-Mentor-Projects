@@ -151,8 +151,8 @@ header img {
     width: 350px;
   }
   .eg-card .card-front {
-    top: 30vh;
-    left: 15vw;
+    top: 25vh;
+    left: 18vw;
   }
   .eg-card .card-back {
     top: 55vh;
@@ -171,8 +171,8 @@ header img {
     padding: 1.75rem;
   }
   .eg-card-info-front {
-    top: 30vh;
-    left: 15vw;
+    top: 25vh;
+    left: 18vw;
   }
   .eg-card-info-front .logo {
     width: 80px;
