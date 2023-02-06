@@ -1,0 +1,53 @@
+.chart-div {
+  background-color: $very-pale-orange;
+  border-radius: $border-radius;
+  padding: $padding;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  hr {
+    border: none;
+    border-top: 3px solid $cream;
+  }
+}
+
+.chart {
+  h1 {
+    font-size: 1.5rem;
+    font-weight: $fw-bold;
+  }
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+
+  h2 {
+    font-size: $fs;
+    font-weight: $fw-normal;
+    color: $medium-brown;
+  }
+
+  p {
+    color: $medium-brown;
+    color: $dark-brown;
+    font-weight: $fw-bold;
+  }
+}
+
+.amount {
+  font-size: 2rem;
+}
+
+.percentage-difference {
+  text-align: right;
+  align-self: flex-end;
+}
+
+@media screen and (min-width: 50em) {
+  .chart-div {
+    padding: 2rem;
+  }
+}

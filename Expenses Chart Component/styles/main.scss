@@ -1,0 +1,22 @@
+@import "./cssReset";
+@import "./variables";
+@import "./balance";
+@import "./chart";
+
+body {
+  font-family: $ff;
+  font-size: $fs;
+  font-weight: $fw-normal;
+  background-color: $cream;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem 1rem;
+}

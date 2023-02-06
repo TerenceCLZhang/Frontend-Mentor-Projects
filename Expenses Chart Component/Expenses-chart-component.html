@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Expenses chart component</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <main>
+      <div class="balance">
+        <div class="balance-display">
+          <h2>My balance</h2>
+          <p class="total">$921.48</p>
+        </div>
+
+        <img src="images/logo.svg" alt="logo" />
+      </div>
+
+      <div class="chart-div">
+        <div class="chart">
+          <h1>Spending - Last 7 days</h1>
+          <canvas id="spending-chart" width="400px" height="300px"></canvas>
+        </div>
+
+        <hr />
+
+        <div class="details">
+          <div class="total-month">
+            <h2>Total this month</h2>
+            <p class="amount">$478.33</p>
+          </div>
+          <div class="percentage-difference">
+            <p>+2.4%</p>
+            <h2>from last month</h2>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="scripts/chart.js"></script>
+  </body>
+</html>

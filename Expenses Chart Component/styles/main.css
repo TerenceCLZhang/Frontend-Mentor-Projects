@@ -1,0 +1,154 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+.balance {
+  background-color: hsl(10deg, 79%, 65%);
+  padding: 1rem;
+  border-radius: 1rem;
+  color: hsl(33deg, 100%, 98%);
+  display: flex;
+  justify-content: space-between;
+}
+.balance h2 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.total {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.chart-div {
+  background-color: hsl(33deg, 100%, 98%);
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.chart-div hr {
+  border: none;
+  border-top: 3px solid hsl(27deg, 66%, 92%);
+}
+
+.chart h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+}
+.details h2 {
+  font-size: 18px;
+  font-weight: 400;
+  color: hsl(28deg, 10%, 53%);
+}
+.details p {
+  color: hsl(28deg, 10%, 53%);
+  color: hsl(25deg, 47%, 15%);
+  font-weight: 700;
+}
+
+.amount {
+  font-size: 2rem;
+}
+
+.percentage-difference {
+  text-align: right;
+  align-self: flex-end;
+}
+
+@media screen and (min-width: 50em) {
+  .chart-div {
+    padding: 2rem;
+  }
+}
+body {
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  background-color: hsl(27deg, 66%, 92%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem 1rem;
+}/*# sourceMappingURL=main.css.map */
