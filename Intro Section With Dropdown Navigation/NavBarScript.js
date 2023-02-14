@@ -1,25 +1,28 @@
-const menuBtn = document.getElementById("menu-btn");
-const menu = document.getElementById("menu");
-const closeBtn = document.getElementById("close-btn");
-const featuresBtn = document.getElementById("features-btn");
-const companyBtn = document.getElementById("company-btn");
-const features = document.getElementsByClassName("features")[0];
-const company = document.getElementsByClassName("company")[0];
+const menuBtn = document.querySelector("#menu-btn");
+const menu = document.querySelector("#menu");
+const closeBtn = document.querySelector("#close-btn");
+const featuresBtn = document.querySelector("#features-btn");
+const companyBtn = document.querySelector("#company-btn");
+const features = document.querySelector(".features");
+const company = document.querySelector(".company");
 
-const arrowFeature = featuresBtn.querySelector("img");
-const arrowCompany = companyBtn.querySelector("img");
+const arrows = {
+  features: featuresBtn.querySelector("img"),
+  company: companyBtn.querySelector("img"),
+};
 
-const body = document.body;
-const bodyChildren = Array.from(body.children);
+const bodyChildren = Array.from(document.body.children);
 const filteredChildren = bodyChildren.filter(
   (child) => child.tagName !== "NAV"
 );
 
-menuBtn.addEventListener("click", () => {
+menuBtn.addEventListener("click", (event) => {
+  event.stopPropagation();
   menu.style.display = "flex";
   filteredChildren.forEach((child) => {
     child.style.filter = "blur(1px)";
   });
+  document.body.style.overflow = "hidden";
 });
 
 closeBtn.addEventListener("click", () => {
@@ -27,39 +30,48 @@ closeBtn.addEventListener("click", () => {
   filteredChildren.forEach((child) => {
     child.style.filter = "blur(0px)";
   });
+  document.body.style.overflow = "auto";
 });
 
 featuresBtn.addEventListener("click", () => {
-  if (features.style.display === "flex") {
-    features.style.display = "none";
-    arrowFeature.src = "images/icon-arrow-down.svg";
-  } else {
-    features.style.display = "flex";
-    arrowFeature.src = "images/icon-arrow-up.svg";
-  }
+  toggleSection(features, arrows.features);
 });
 
 companyBtn.addEventListener("click", () => {
-  if (company.style.display === "flex") {
-    company.style.display = "none";
-    arrowCompany.src = "images/icon-arrow-down.svg";
-  } else {
-    company.style.display = "flex";
-    arrowCompany.src = "images/icon-arrow-up.svg";
-  }
+  toggleSection(company, arrows.company);
 });
 
-window.addEventListener("resize", function () {
-  const width = window.innerWidth;
+function toggleSection(section, arrow) {
+  if (section.style.display === "flex") {
+    section.style.display = "none";
+    arrow.src = "images/icon-arrow-down.svg";
+  } else {
+    section.style.display = "flex";
+    arrow.src = "images/icon-arrow-up.svg";
+  }
+}
 
+window.addEventListener("resize", () => {
+  const width = window.innerWidth;
   if (width > 50 * 16) {
     menu.style.display = "none";
     features.style.display = "none";
-    arrowFeature.src = "images/icon-arrow-down.svg";
+    arrows.features.src = "images/icon-arrow-down.svg";
     company.style.display = "none";
-    arrowCompany.src = "images/icon-arrow-down.svg";
+    arrows.company.src = "images/icon-arrow-down.svg";
     filteredChildren.forEach((child) => {
       child.style.filter = "blur(0px)";
     });
+    document.body.style.overflow = "auto";
+  }
+});
+
+document.addEventListener("click", (event) => {
+  if (menu.style.display === "flex" && !menu.contains(event.target)) {
+    menu.style.display = "none";
+    filteredChildren.forEach((child) => {
+      child.style.filter = "blur(0px)";
+    });
+    document.body.style.overflow = "auto";
   }
 });
