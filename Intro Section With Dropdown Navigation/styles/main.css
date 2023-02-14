@@ -81,9 +81,6 @@ header {
   header #menu-btn {
     display: none;
   }
-  header img {
-    height: 30px;
-  }
 }
 main {
   display: flex;
@@ -126,9 +123,9 @@ h1 {
 
 @media (min-width: 50em) {
   main {
-    margin-right: 8rem;
     gap: 3rem;
     align-self: flex-end;
+    margin-right: 8rem;
   }
   main p {
     text-align: left;
@@ -295,6 +292,7 @@ footer .client {
 
 @media (min-width: 50em) {
   footer {
+    margin-right: 8rem;
     align-self: flex-end;
   }
 }
