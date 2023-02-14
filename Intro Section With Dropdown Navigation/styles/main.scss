@@ -1,0 +1,78 @@
+@import "./cssReset";
+@import "./variables";
+@import "./headerStyles";
+@import "./mainStlyes";
+@import "./navBar";
+@import "./footerStyles";
+
+body {
+  font-family: $ff;
+  font-size: $fs;
+  font-weight: $fw-normal;
+  background-color: $almost-white;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: $medium-gray;
+}
+
+header,
+main,
+footer {
+  z-index: 1;
+}
+
+nav {
+  z-index: 2;
+}
+
+@media (min-width: 50em) {
+  body {
+    padding: 4rem;
+    display: grid;
+    grid-template-areas: "logo nav-bar nav-bar nav-bar" ". main pic ." ". footer pic  .";
+    grid-template-columns: auto 0.85fr auto auto;
+    grid-template-rows: auto auto auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header {
+    grid-area: logo;
+  }
+
+  nav {
+    grid-area: nav-bar;
+  }
+
+  picture {
+    grid-area: pic;
+    width: 33vw;
+    align-self: flex-end;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+
+  header,
+  nav,
+  main,
+  footer {
+    padding: 0;
+  }
+}

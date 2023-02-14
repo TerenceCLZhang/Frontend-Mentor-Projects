@@ -1,0 +1,17 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem 0 1rem;
+}
+
+@media (min-width: 50em) {
+  header {
+    #menu-btn {
+      display: none;
+    }
+
+    img {
+      height: 30px;
+    }
+  }
+}

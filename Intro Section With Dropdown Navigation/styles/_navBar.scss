@@ -1,0 +1,58 @@
+@import "./MenuStyles.scss/menuLinks";
+@import "./MenuStyles.scss/extraLinks";
+@import "./MenuStyles.scss/accountLinks";
+
+nav {
+  background-color: $almost-white;
+  position: absolute;
+  right: 0;
+  min-height: 100vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  display: none;
+  width: 250px;
+
+  * {
+    font-size: 1rem;
+    color: $medium-gray;
+  }
+
+  .menu-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 50em) {
+  nav {
+    position: static;
+    display: grid !important;
+    grid-template-columns: auto auto;
+    min-height: auto;
+    width: 100%;
+
+    .menu-options {
+      position: relative;
+      flex-direction: row;
+      gap: 0;
+      grid-column-start: 1;
+
+      & > a,
+      button {
+        margin-left: 3rem;
+      }
+
+      & > a:hover,
+      button:hover {
+        color: $almost-black;
+      }
+    }
+
+    #close-btn {
+      display: none;
+    }
+  }
+}

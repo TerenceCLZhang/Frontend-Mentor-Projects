@@ -1,0 +1,40 @@
+.features,
+.company {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 2rem;
+  display: none;
+
+  a {
+    display: flex;
+    gap: 5px;
+  }
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (min-width: 50em) {
+  .features,
+  .company {
+    position: absolute;
+    background-color: $almost-white;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    box-shadow: 0 5px 10px $medium-gray;
+    top: 40px;
+  }
+
+  .features {
+    top: 50px;
+    left: -35px;
+  }
+
+  .company {
+    top: 50px;
+    left: 170px;
+  }
+}

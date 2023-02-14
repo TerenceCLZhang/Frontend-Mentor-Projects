@@ -1,0 +1,19 @@
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 0 1rem 1rem 1rem;
+  margin-bottom: 0;
+  align-items: center;
+  padding-top: 1rem;
+
+  .client {
+    justify-self: center;
+  }
+}
+
+@media (min-width: 50em) {
+  footer {
+    align-self: flex-end;
+  }
+}
