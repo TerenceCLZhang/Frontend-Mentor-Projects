@@ -44,14 +44,14 @@
       justify-self: flex-end;
     }
 
-    #settings {
+    .settings {
       grid-area: settings;
       align-self: center;
       justify-self: flex-end;
       color: #bbc0ff;
     }
 
-    #settings:hover {
+    .settings:hover {
       cursor: pointer;
       color: white;
     }
@@ -112,7 +112,7 @@
         grid-area: heading;
       }
 
-      #settings {
+      .settings {
         grid-area: settings;
       }
 

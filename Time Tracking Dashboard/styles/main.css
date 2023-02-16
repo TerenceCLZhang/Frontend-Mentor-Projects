@@ -189,13 +189,13 @@ button:hover,
   align-self: center;
   justify-self: flex-end;
 }
-.card .card-contents #settings {
+.card .card-contents .settings {
   grid-area: settings;
   align-self: center;
   justify-self: flex-end;
   color: #bbc0ff;
 }
-.card .card-contents #settings:hover {
+.card .card-contents .settings:hover {
   cursor: pointer;
   color: white;
 }
@@ -246,7 +246,7 @@ button:hover,
   .card .card-contents h2 {
     grid-area: heading;
   }
-  .card .card-contents #settings {
+  .card .card-contents .settings {
     grid-area: settings;
   }
   .card .card-contents .current-display {
