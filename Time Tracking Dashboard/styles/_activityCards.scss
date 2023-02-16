@@ -1,0 +1,130 @@
+.card {
+  border-radius: $border-radius-card;
+  overflow: hidden;
+  position: relative;
+  height: 165px;
+
+  .card-icon {
+    img {
+      margin: 0 1rem 0 auto;
+    }
+  }
+
+  .card-contents {
+    background-color: $dark-blue;
+    border-radius: $border-radius-card;
+    padding: $padding-card-mobile;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "title settings" "current previous";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+    h2 {
+      font-weight: $fw-medium;
+      font-size: $fs-card-title;
+      grid-area: title;
+      align-self: center;
+    }
+
+    .current-display {
+      font-size: $fs-large-mobile;
+      font-weight: $fw-light;
+      grid-area: current;
+      align-self: center;
+    }
+
+    .previous-display {
+      color: $pale-blue;
+      font-size: 0.825rem;
+      grid-area: previous;
+      align-self: center;
+      justify-self: flex-end;
+    }
+
+    #settings {
+      grid-area: settings;
+      align-self: center;
+      justify-self: flex-end;
+      color: #bbc0ff;
+    }
+
+    #settings:hover {
+      cursor: pointer;
+      color: white;
+    }
+  }
+
+  .card-contents:hover {
+    background-color: $dark-blue-lighter;
+    cursor: pointer;
+  }
+}
+
+.work {
+  background-color: $work;
+}
+
+.play {
+  background-color: $play;
+}
+
+.study {
+  background-color: $study;
+}
+
+.exercise {
+  background-color: $exercise;
+}
+
+.social {
+  background-color: $social;
+}
+
+.self-care {
+  background-color: $self-care;
+}
+
+@media (min-width: 50em) {
+  .card {
+    height: 225px;
+    width: 225px;
+
+    .card-icon {
+      img {
+        margin: -0.5rem 1rem 0 auto;
+      }
+    }
+
+    .card-contents {
+      height: 80%;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto auto;
+      grid-template-areas:
+        "heading settings"
+        "current ."
+        "previous .";
+      padding: $padding-card-desktop;
+
+      h2 {
+        grid-area: heading;
+      }
+
+      #settings {
+        grid-area: settings;
+      }
+
+      .current-display {
+        grid-area: current;
+        font-size: $fs-large-desktop;
+      }
+
+      .previous-display {
+        grid-area: previous;
+        justify-self: flex-start;
+      }
+    }
+  }
+}

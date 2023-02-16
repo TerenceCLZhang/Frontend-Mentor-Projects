@@ -1,0 +1,92 @@
+button {
+  background-color: transparent;
+  border: none;
+  color: $pale-blue;
+  cursor: pointer;
+}
+
+button:hover,
+.active-button {
+  color: white;
+}
+
+.profile {
+  background-color: $dark-blue;
+  border-radius: $border-radius-card;
+
+  .user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: $blue;
+    padding: $padding-card-mobile;
+    border-radius: $border-radius-card;
+
+    .profile-pic {
+      border: 2px solid white;
+      border-radius: 50%;
+      width: 65px;
+    }
+
+    .name {
+      display: flex;
+      flex-direction: column;
+
+      & > * {
+        font-weight: $fw-light;
+      }
+
+      p {
+        color: $pale-blue;
+        font-size: $fs-card-title;
+      }
+
+      h1 {
+        font-size: $fs-large-mobile;
+      }
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: $padding-card-mobile;
+  }
+}
+
+.hovering-background {
+  background-color: $dark-blue-lighter !important;
+  cursor: pointer;
+}
+
+@media (min-width: 50em) {
+  .profile {
+    .user {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      height: 70%;
+      gap: 2rem;
+      padding-bottom: 4rem;
+
+      .name {
+        h1 {
+          font-size: $fs-large-desktop;
+          line-height: 3rem;
+        }
+      }
+    }
+
+    .buttons {
+      flex-direction: column;
+      margin-right: 5rem;
+      justify-content: center;
+      gap: 0.5rem;
+      height: 30%;
+
+      button {
+        text-align: left;
+      }
+    }
+  }
+}

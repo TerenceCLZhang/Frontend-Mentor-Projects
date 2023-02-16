@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <main>
+      <div class="profile">
+        <div class="user">
+          <img
+            src="images/image-jeremy.png"
+            alt="Jeremy Robson"
+            class="profile-pic"
+          />
+          <div class="name">
+            <p>Report for</p>
+            <h1>Jeremy Robson</h1>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button>Daily</button>
+          <button class="active-button">Weekly</button>
+          <button>Monthly</button>
+        </div>
+      </div>
+
+      <div class="card work">
+        <div class="card-icon">
+          <img src="images/icon-work.svg" alt="icon-work" />
+        </div>
+
+        <div class="card-contents">
+          <h2>Work</h2>
+
+          <!-- daily -->
+          <p class="daily current-display" style="display: none">5hrs</p>
+          <p class="daily previous-display" style="display: none">
+            Last Day - <span>7hrs</span>
+          </p>
+
+          <!-- weekly -->
+          <p class="weekly current-display">32hrs</p>
+          <p class="weekly previous-display">Last Week - <span>36hrs</span></p>
+
+          <!-- monthly -->
+          <p class="monthly current-display" style="display: none">103hrs</p>
+          <p class="monthly previous-display" style="display: none">
+            Last Month - <span>128hrs</span>
+          </p>
+
+          <button id="settings">
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="currentColor"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="card play">
+        <div class="card-icon">
+          <img src="images/icon-play.svg" alt="icon-play" />
+        </div>
+
+        <div class="card-contents">
+          <h2>Play</h2>
+
+          <!-- daily -->
+          <p class="daily current-display" style="display: none">1hr</p>
+          <p class="daily previous-display" style="display: none">
+            Last Day - <span>2hrs</span>
+          </p>
+
+          <!-- weekly -->
+          <p class="weekly current-display">10hrs</p>
+          <p class="weekly previous-display">Last Week - <span>8hrs</span></p>
+
+          <!-- monthly -->
+          <p class="monthly current-display" style="display: none">23hrs</p>
+          <p class="monthly previous-display" style="display: none">
+            Last Month - <span>29hrs</span>
+          </p>
+
+          <button id="settings">
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="currentColor"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="card study">
+        <div class="card-icon">
+          <img src="images/icon-study.svg" alt="icon-study" />
+        </div>
+
+        <div class="card-contents">
+          <h2>Study</h2>
+
+          <!-- daily -->
+          <p class="daily current-display" style="display: none">0hrs</p>
+          <p class="daily previous-display" style="display: none">
+            Last Day - <span>1hr</span>
+          </p>
+
+          <!-- weekly -->
+          <p class="weekly current-display">4hrs</p>
+          <p class="weekly previous-display">Last Week - <span>7hrs</span></p>
+
+          <!-- monthly -->
+          <p class="monthly current-display" style="display: none">13hrs</p>
+          <p class="monthly previous-display" style="display: none">
+            Last Month - <span>19hrs</span>
+          </p>
+
+          <button id="settings">
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="currentColor"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="card exercise">
+        <div class="card-icon">
+          <img src="images/icon-exercise.svg" alt="icon-exercise" />
+        </div>
+
+        <div class="card-contents">
+          <h2>Exercise</h2>
+
+          <!-- daily -->
+          <p class="daily current-display" style="display: none">1hr</p>
+          <p class="daily previous-display" style="display: none">
+            Last Day - <span>1hr</span>
+          </p>
+
+          <!-- weekly -->
+          <p class="weekly current-display">4hrs</p>
+          <p class="weekly previous-display">Last Week - <span>5hrs</span></p>
+
+          <!-- monthly -->
+          <p class="monthly current-display" style="display: none">11hrs</p>
+          <p class="monthly previous-display" style="display: none">
+            Last Month - <span>18hrs</span>
+          </p>
+
+          <button id="settings">
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="currentColor"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="card social">
+        <div class="card-icon">
+          <img src="images/icon-social.svg" alt="icon-social" />
+        </div>
+
+        <div class="card-contents">
+          <h2>Social</h2>
+
+          <!-- daily -->
+          <p class="daily current-display" style="display: none">1hr</p>
+          <p class="daily previous-display" style="display: none">
+            Last Day - <span>3hrs</span>
+          </p>
+
+          <!-- weekly -->
+          <p class="weekly current-display">10hrs</p>
+          <p class="weekly previous-display">Last Week - <span>21hrs</span></p>
+
+          <!-- monthly -->
+          <p class="monthly current-display" style="display: none">21hrs</p>
+          <p class="monthly previous-display" style="display: none">
+            Last Month - <span>23hrs</span>
+          </p>
+
+          <button id="settings">
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="currentColor"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="card self-care">
+        <div class="card-icon">
+          <img src="images/icon-self-care.svg" alt="icon-self-care" />
+        </div>
+
+        <div class="card-contents">
+          <h2>Self Care</h2>
+
+          <!-- daily -->
+          <p class="daily current-display" style="display: none">0hrs</p>
+          <p class="daily previous-display" style="display: none">
+            Last Day - <span>1hr</span>
+          </p>
+
+          <!-- weekly -->
+          <p class="weekly current-display">2hrs</p>
+          <p class="weekly previous-display">Last Week - <span>2hrs</span></p>
+
+          <!-- monthly -->
+          <p class="monthly current-display" style="display: none">7hrs</p>
+          <p class="monthly previous-display" style="display: none">
+            Last Month - <span>11hrs</span>
+          </p>
+
+          <button id="settings">
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="currentColor"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <script src="scripts/ChangeViewData.js"></script>
+    <script src="scripts/ProfileBackgroundChanger.js"></script>
+  </body>
+</html>

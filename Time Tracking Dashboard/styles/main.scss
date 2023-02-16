@@ -1,0 +1,35 @@
+@import "./cssReset";
+@import "./variables";
+@import "./profileCard";
+@import "./activityCards";
+
+body {
+  background-color: $very-dark-blue;
+  font-family: $ff;
+  font-weight: $fw-normal;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 1rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 50em) {
+  main {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "profile work play study" "profile exercise social self-care";
+  }
+
+  .profile {
+    grid-area: profile;
+  }
+}

@@ -1,0 +1,289 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: hsl(236deg, 100%, 87%);
+  cursor: pointer;
+}
+
+button:hover,
+.active-button {
+  color: white;
+}
+
+.profile {
+  background-color: hsl(235deg, 46%, 20%);
+  border-radius: 1rem;
+}
+.profile .user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: hsl(246deg, 80%, 60%);
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+}
+.profile .user .profile-pic {
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 65px;
+}
+.profile .user .name {
+  display: flex;
+  flex-direction: column;
+}
+.profile .user .name > * {
+  font-weight: 300;
+}
+.profile .user .name p {
+  color: hsl(236deg, 100%, 87%);
+  font-size: 18px;
+}
+.profile .user .name h1 {
+  font-size: 1.5rem;
+}
+.profile .buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+}
+
+.hovering-background {
+  background-color: hsl(236deg, 32%, 27%) !important;
+  cursor: pointer;
+}
+
+@media (min-width: 50em) {
+  .profile .user {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 70%;
+    gap: 2rem;
+    padding-bottom: 4rem;
+  }
+  .profile .user .name h1 {
+    font-size: 2.25rem;
+    line-height: 3rem;
+  }
+  .profile .buttons {
+    flex-direction: column;
+    margin-right: 5rem;
+    justify-content: center;
+    gap: 0.5rem;
+    height: 30%;
+  }
+  .profile .buttons button {
+    text-align: left;
+  }
+}
+.card {
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  height: 165px;
+}
+.card .card-icon img {
+  margin: 0 1rem 0 auto;
+}
+.card .card-contents {
+  background-color: hsl(235deg, 46%, 20%);
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "title settings" "current previous";
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+.card .card-contents h2 {
+  font-weight: 500;
+  font-size: 18px;
+  grid-area: title;
+  align-self: center;
+}
+.card .card-contents .current-display {
+  font-size: 1.5rem;
+  font-weight: 300;
+  grid-area: current;
+  align-self: center;
+}
+.card .card-contents .previous-display {
+  color: hsl(236deg, 100%, 87%);
+  font-size: 0.825rem;
+  grid-area: previous;
+  align-self: center;
+  justify-self: flex-end;
+}
+.card .card-contents #settings {
+  grid-area: settings;
+  align-self: center;
+  justify-self: flex-end;
+  color: #bbc0ff;
+}
+.card .card-contents #settings:hover {
+  cursor: pointer;
+  color: white;
+}
+.card .card-contents:hover {
+  background-color: hsl(236deg, 32%, 27%);
+  cursor: pointer;
+}
+
+.work {
+  background-color: hsl(15deg, 100%, 70%);
+}
+
+.play {
+  background-color: hsl(195deg, 74%, 62%);
+}
+
+.study {
+  background-color: hsl(348deg, 100%, 68%);
+}
+
+.exercise {
+  background-color: hsl(145deg, 58%, 55%);
+}
+
+.social {
+  background-color: hsl(264deg, 64%, 52%);
+}
+
+.self-care {
+  background-color: hsl(43deg, 84%, 65%);
+}
+
+@media (min-width: 50em) {
+  .card {
+    height: 225px;
+    width: 225px;
+  }
+  .card .card-icon img {
+    margin: -0.5rem 1rem 0 auto;
+  }
+  .card .card-contents {
+    height: 80%;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "heading settings" "current ." "previous .";
+    padding: 1.5rem;
+  }
+  .card .card-contents h2 {
+    grid-area: heading;
+  }
+  .card .card-contents #settings {
+    grid-area: settings;
+  }
+  .card .card-contents .current-display {
+    grid-area: current;
+    font-size: 2.25rem;
+  }
+  .card .card-contents .previous-display {
+    grid-area: previous;
+    justify-self: flex-start;
+  }
+}
+body {
+  background-color: hsl(226deg, 43%, 10%);
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 1rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 50em) {
+  main {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "profile work play study" "profile exercise social self-care";
+  }
+  .profile {
+    grid-area: profile;
+  }
+}/*# sourceMappingURL=main.css.map */
