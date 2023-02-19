@@ -1,0 +1,270 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+main button {
+  cursor: pointer;
+  transition: 0.25s all;
+  border: none;
+}
+main .details button {
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(183deg, 100%, 15%);
+  border-radius: 0.5rem;
+}
+main .details button:hover {
+  background-color: hsl(172deg, 78%, 75%);
+  color: hsl(183deg, 100%, 15%);
+}
+main .results #reset-btn {
+  background-color: hsl(172deg, 67%, 45%);
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  cursor: auto;
+}
+main .results .enabled {
+  cursor: pointer !important;
+}
+main .results .enabled:hover {
+  background-color: hsl(172deg, 78%, 75%);
+  color: hsl(183deg, 100%, 15%);
+}
+main .results .disabled {
+  opacity: 50%;
+}
+
+.selected {
+  background-color: hsl(172deg, 72%, 41%) !important;
+  color: hsl(183deg, 100%, 15%) !important;
+}
+
+main {
+  background-color: hsl(0deg, 0%, 100%);
+  padding: 2rem;
+  border-radius: 1rem 1rem 0 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100%;
+  /* Chrome, Safari, Edge, Opera */
+  /* Firefox */
+}
+main label,
+main p {
+  color: hsl(186deg, 14%, 43%);
+}
+main input::-webkit-outer-spin-button,
+main input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+main input[type=number] {
+  -moz-appearance: textfield;
+}
+main input {
+  font-size: 24px;
+  background-color: hsl(189deg, 41%, 97%);
+  border: 2px solid hsl(189deg, 41%, 97%);
+  border-radius: 0.5rem;
+  color: hsl(183deg, 100%, 15%);
+  padding: 0.5rem 1rem 0.5rem 3rem;
+  text-align: right;
+  cursor: pointer;
+}
+main input:focus {
+  outline-color: hsl(172deg, 67%, 45%);
+}
+main .error-input {
+  border-color: red !important;
+}
+main .details {
+  gap: 2rem;
+}
+main .details #bill-amount,
+main .details #num-people {
+  background-repeat: no-repeat;
+  background-position: 20px 50%;
+}
+main .details #bill-amount {
+  background-image: url("../images/icon-dollar.svg");
+}
+main .details #num-people {
+  background-image: url("../images/icon-person.svg");
+}
+main .details .tip-percentage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+main .details .tip-percentage * {
+  padding: 0.5rem 1rem;
+  font-size: 24px;
+}
+main .details .labels {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main .details .labels .error-message {
+  color: red;
+}
+main div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .results {
+  background-color: hsl(183deg, 100%, 15%);
+  color: hsl(0deg, 0%, 100%);
+  padding: 2rem;
+  border-radius: 1rem;
+  gap: 1.5rem;
+}
+main .results .amounts > div {
+  flex-direction: row;
+  justify-content: space-between;
+}
+main .results .amounts .tip-per-person div,
+main .results .amounts .total-per-person div {
+  gap: 0;
+}
+main .results .amounts .tip-per-person div p:first-of-type,
+main .results .amounts .total-per-person div p:first-of-type {
+  color: hsl(0deg, 0%, 100%);
+}
+main .results .amounts .tip-per-person div p:last-of-type,
+main .results .amounts .total-per-person div p:last-of-type {
+  font-size: 0.85rem;
+}
+main .results .amounts .tip-per-person h2,
+main .results .amounts .total-per-person h2 {
+  color: hsl(172deg, 67%, 45%);
+  font-size: 24px;
+}
+
+@media (min-width: 50em) {
+  main {
+    flex-direction: row;
+    width: auto;
+    border-radius: 1rem;
+    width: 65vw;
+  }
+  main .details {
+    width: 50%;
+  }
+  main .details .tip-percentage {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  main .results {
+    width: 50%;
+    justify-content: space-between;
+  }
+  main .results .amounts {
+    gap: 3rem;
+  }
+  main .results .amounts .tip-per-person,
+  main .results .amounts .total-per-person {
+    align-items: center;
+  }
+  main .results .amounts .tip-per-person h2,
+  main .results .amounts .total-per-person h2 {
+    font-size: 3rem;
+    line-height: 3rem;
+    text-align: right;
+    overflow: hidden;
+  }
+}
+body {
+  background-color: hsl(173deg, 71%, 93%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+}
+
+header {
+  padding: 2rem 1rem;
+}
+
+@media (min-width: 50em) {
+  body {
+    justify-content: center;
+    gap: 3rem;
+  }
+  header {
+    padding: 0;
+  }
+}/*# sourceMappingURL=main.css.map */

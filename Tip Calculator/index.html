@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header>
+      <img src="images/logo.svg" alt="logo" />
+    </header>
+    <main>
+      <div class="details">
+        <div id="bill-div">
+          <div class="labels">
+            <label for="bill-amount">Bill</label>
+          </div>
+
+          <input
+            type="number"
+            name="bill-amount"
+            id="bill-amount"
+            min="0"
+            onkeypress="return isNumberKey(this, event);"
+          />
+        </div>
+
+        <div>
+          <p>Select Tip %</p>
+          <div class="tip-percentage">
+            <button value="0.05">5%</button>
+            <button value="0.1">10%</button>
+            <button value="0.15">15%</button>
+            <button value="0.25">25%</button>
+            <button value="0.5">50%</button>
+            <input
+              type="number"
+              placeholder="Custom"
+              min="0"
+              max="100"
+              id="custom-percentage"
+              onkeypress="return isNumberKey(this, event);"
+            />
+          </div>
+        </div>
+
+        <div id="people-div">
+          <div class="labels">
+            <label for="num-people">Number of People</label>
+          </div>
+
+          <input
+            type="number"
+            name="num-people"
+            id="num-people"
+            min="1"
+            onkeypress="return isNumberKey(this, event);"
+          />
+        </div>
+      </div>
+
+      <div class="results">
+        <div class="amounts">
+          <div class="tip-per-person">
+            <div>
+              <p>Tip Amount</p>
+              <p>/ person</p>
+            </div>
+            <h2>$<span id="tip">0.00</span></h2>
+          </div>
+          <div class="total-per-person">
+            <div>
+              <p>Total</p>
+              <p>/ person</p>
+            </div>
+            <h2>$<span id="total">0.00</span></h2>
+          </div>
+        </div>
+
+        <button id="reset-btn" class="disabled" disabled>Reset</button>
+      </div>
+    </main>
+
+    <script src="scripts/AmountValidation.js"></script>
+    <script src="scripts/Calculation.js"></script>
+    <script src="scripts/Reset.js"></script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+@import "./cssReset";
+@import "./variables";
+@import "./mainStyles";
+
+body {
+  background-color: $background;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: $ff;
+  font-weight: $fw;
+}
+
+header {
+  padding: 2rem 1rem;
+}
+
+@media (min-width: 50em) {
+  body {
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  header {
+    padding: 0;
+  }
+}

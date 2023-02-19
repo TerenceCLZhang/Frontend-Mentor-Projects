@@ -1,0 +1,49 @@
+main {
+  button {
+    cursor: pointer;
+    transition: 0.25s all;
+    border: none;
+  }
+
+  .details {
+    button {
+      color: $white;
+      background-color: $very-dark-cyan;
+      border-radius: 0.5rem;
+    }
+
+    button:hover {
+      background-color: $hover;
+      color: $very-dark-cyan;
+    }
+  }
+
+  .results {
+    #reset-btn {
+      background-color: $strong-cyan;
+      padding: 0.5rem 1rem;
+      text-transform: uppercase;
+      border-radius: 0.5rem;
+      font-size: 1.25rem;
+      cursor: auto;
+    }
+
+    .enabled {
+      cursor: pointer !important;
+    }
+
+    .enabled:hover {
+      background-color: $hover;
+      color: $very-dark-cyan;
+    }
+
+    .disabled {
+      opacity: 50%;
+    }
+  }
+}
+
+.selected {
+  background-color: $selected !important;
+  color: $very-dark-cyan !important;
+}
