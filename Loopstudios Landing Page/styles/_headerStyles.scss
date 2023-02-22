@@ -8,6 +8,17 @@
   background-image: url("../images/desktop/image-hero.jpg");
 }
 
+header::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 35%);
+  z-index: 0;
+}
+
 header {
   position: relative;
   background-repeat: no-repeat;
@@ -16,6 +27,10 @@ header {
   display: flex;
   flex-direction: column;
   row-gap: $header-gap;
+
+  & > * {
+    z-index: 1;
+  }
 
   .header-content {
     padding: $padding-top-bottom-page-mobile $padding-left-right-page-mobile 0
