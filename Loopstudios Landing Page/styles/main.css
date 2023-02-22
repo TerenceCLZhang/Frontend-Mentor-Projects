@@ -118,10 +118,19 @@ h6 {
     font-weight: 400;
   }
 }
-header {
+.mobile-background {
   background-image: url("../images/mobile/image-hero.jpg");
+}
+
+.desktop-background {
+  background-image: url("../images/desktop/image-hero.jpg");
+}
+
+header {
+  position: relative;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: column;
   row-gap: 10rem;
@@ -215,7 +224,7 @@ main .all-creations .creations .creation {
   position: relative;
 }
 main .all-creations .creations .creation img {
-  filter: brightness(60%);
+  filter: brightness(80%);
   z-index: 1;
 }
 main .all-creations .creations .creation h3 {
