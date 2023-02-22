@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Loopstudios landing page</title>
+
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header>
+      <nav id="nav-bar" style="display: none">
+        <div class="nav-header">
+          <img src="images/logo.svg" alt="logo" />
+          <button id="close-nav" aria-label="close nav menu">
+            <img src="images/icon-close.svg" alt="close" />
+          </button>
+        </div>
+
+        <div class="nav-options">
+          <div class="link-wrapper">
+            <a href="#" class="underline-hover-effect">About</a>
+          </div>
+          <div class="link-wrapper">
+            <a href="#" class="underline-hover-effect">Careers</a>
+          </div>
+          <div class="link-wrapper">
+            <a href="#" class="underline-hover-effect">Events</a>
+          </div>
+          <div class="link-wrapper">
+            <a href="#" class="underline-hover-effect">Products</a>
+          </div>
+          <div class="link-wrapper">
+            <a href="#" class="underline-hover-effect">Support</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-content">
+        <img src="images/logo.svg" alt="logo" />
+        <button id="open-nav" aria-label="open nav menu">
+          <img src="images/icon-hamburger.svg" alt="open" />
+        </button>
+      </div>
+
+      <div class="title">
+        <h1>Immersive experiences that deliver</h1>
+      </div>
+    </header>
+
+    <main>
+      <div class="introduction">
+        <picture>
+          <source
+            srcset="images/desktop/image-interactive.jpg"
+            media="(min-width: 50em)"
+          />
+          <img
+            src="images/mobile/image-interactive.jpg"
+            alt="person wearing a vr headset"
+          />
+        </picture>
+
+        <div class="introduction-content">
+          <h2>The leader in interactive VR</h2>
+          <p>
+            Founded in 2011, Loopstudios has been producing world-class virtual
+            reality projects for some of the best companies around the globe.
+            Our award-winning creations have transformed businesses through
+            digital experiences that bind to their brand.
+          </p>
+        </div>
+      </div>
+
+      <div class="all-creations">
+        <h2>Our creations</h2>
+        <div class="creations">
+          <a href="#" class="creation">
+            <h3>Deep earth</h3>
+            <picture>
+              <source
+                srcset="images/desktop/image-deep-earth.jpg"
+                media="(min-width: 50em)" />
+              <img
+                src="images/mobile/image-deep-earth.jpg"
+                alt="image-deep-earth"
+            /></picture>
+          </a>
+          <a href="#" class="creation">
+            <h3>Night arcade</h3>
+            <picture>
+              <source
+                srcset="images/desktop/image-night-arcade.jpg"
+                media="(min-width: 50em)" />
+              <img
+                src="images/mobile/image-night-arcade.jpg"
+                alt="image-night-arcade"
+            /></picture>
+          </a>
+          <a href="#" class="creation">
+            <h3>Soccer team VR</h3>
+            <picture>
+              <source
+                srcset="images/desktop/image-soccer-team.jpg"
+                media="(min-width: 50em)" />
+              <img
+                src="images/mobile/image-soccer-team.jpg"
+                alt="image-soccer-team"
+            /></picture>
+          </a>
+          <a href="#" class="creation">
+            <h3>The grid</h3>
+            <picture>
+              <source
+                srcset="images/desktop/image-grid.jpg"
+                media="(min-width: 50em)" />
+              <img src="images/mobile/image-grid.jpg" alt="image-grid"
+            /></picture>
+          </a>
+          <a href="#" class="creation">
+            <h3>From up above VR</h3>
+            <picture>
+              <source
+                srcset="images/desktop/image-from-above.jpg"
+                media="(min-width: 50em)" />
+              <img
+                src="images/mobile/image-from-above.jpg"
+                alt="image-from-above"
+            /></picture>
+          </a>
+          <a href="#" class="creation">
+            <h3>Pocket borealis</h3>
+            <picture>
+              <source
+                srcset="images/desktop/image-pocket-borealis.jpg"
+                media="(min-width: 50em)" />
+              <img
+                src="images/mobile/image-pocket-borealis.jpg"
+                alt="image-pocket-borealis"
+            /></picture>
+          </a>
+          <a href="#" class="creation">
+            <h3>The curiosity</h3>
+            <picture>
+              <source
+                srcset="images/desktop/image-curiosity.jpg"
+                media="(min-width: 50em)" />
+              <img
+                src="images/mobile/image-curiosity.jpg"
+                alt="image-curiosity"
+            /></picture>
+          </a>
+          <a href="#" class="creation">
+            <h3>Make it fisheye</h3>
+            <picture>
+              <source
+                srcset="images/desktop/image-fisheye.jpg"
+                media="(min-width: 50em)" />
+              <img src="images/mobile/image-fisheye.jpg" alt="image-fisheye"
+            /></picture>
+          </a>
+        </div>
+
+        <a href="#" class="see-all"> See all </a>
+      </div>
+    </main>
+
+    <footer>
+      <img src="images/logo.svg" alt="logo" />
+
+      <div class="extra-links">
+        <a href="#" class="underline-hover-effect">About</a>
+        <a href="#" class="underline-hover-effect">Careers</a>
+        <a href="#" class="underline-hover-effect">Events</a>
+        <a href="#" class="underline-hover-effect">Products</a>
+        <a href="#" class="underline-hover-effect">Support</a>
+      </div>
+
+      <div class="social-media">
+        <a href="#" aria-label="facebook icon" class="underline-hover-effect">
+          <img src="images/icon-facebook.svg" alt="icon-facebook" />
+        </a>
+        <a href="#" aria-label="twitter icon" class="underline-hover-effect">
+          <img src="images/icon-twitter.svg" alt="icon-twitter" />
+        </a>
+        <a href="#" aria-label="pinterest icon" class="underline-hover-effect">
+          <img src="images/icon-pinterest.svg" alt="icon-pinterest" />
+        </a>
+        <a href="#" aria-label="instagram icon" class="underline-hover-effect">
+          <img src="images/icon-instagram.svg" alt="icon-instagram" />
+        </a>
+      </div>
+
+      <p class="copyright">© 2021 Loopstudios. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/OpenNavMenu.js"></script>
+    <script src="scripts/changeNavMenu.js"></script>
+  </body>
+</html>

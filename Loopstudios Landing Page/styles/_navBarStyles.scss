@@ -1,0 +1,58 @@
+#nav-bar {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: $padding-top-bottom-page-mobile $padding-left-right-page-mobile;
+  flex-direction: column;
+  gap: 5rem;
+
+  .nav-header {
+    display: flex;
+    justify-content: space-between;
+
+    & > img {
+      width: $logo-mobile-width;
+    }
+  }
+
+  .nav-options {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .link-wrapper {
+      a {
+        color: $white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.25rem;
+        font-family: $ff-headers;
+        font-weight: $fw-headers;
+      }
+    }
+  }
+}
+
+@media (min-width: 50em) {
+  #nav-bar {
+    background-color: transparent;
+    position: static;
+
+    .nav-header {
+      display: none;
+    }
+
+    .nav-options {
+      flex-direction: row;
+      justify-self: right;
+
+      .link-wrapper {
+        a {
+          font-size: $fs;
+          font-family: $ff-text;
+          font-weight: $fw-text;
+        }
+      }
+    }
+  }
+}

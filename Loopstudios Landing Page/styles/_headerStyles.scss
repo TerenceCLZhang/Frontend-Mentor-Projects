@@ -1,0 +1,79 @@
+@import "./navBarStyles";
+
+header {
+  background-image: url("../images/mobile/image-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  row-gap: $header-gap;
+
+  .header-content {
+    padding: $padding-top-bottom-page-mobile $padding-left-right-page-mobile 0
+      $padding-left-right-page-mobile;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    & > img {
+      width: $logo-mobile-width;
+      height: auto;
+    }
+  }
+
+  .title {
+    padding: 0 $padding-left-right-page-mobile $header-gap
+      $padding-left-right-page-mobile;
+    h1 {
+      color: $white;
+      text-transform: uppercase;
+      border: 2px solid $white;
+      padding: 1rem;
+      font-size: 2.45rem;
+      line-height: 3rem;
+    }
+  }
+}
+
+@media (min-width: 50em) {
+  header {
+    background-image: url("../images/desktop/image-hero.jpg");
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "logo nav-menu" "title title";
+    padding: $padding-top-bottom-page-desktop $padding-left-right-page-desktop
+      $header-gap $padding-left-right-page-desktop;
+
+    & > * {
+      padding: 0 !important;
+    }
+
+    .header-content {
+      grid-area: logo;
+
+      #open-nav {
+        display: none;
+      }
+
+      & > img {
+        width: $logo-desktop-width;
+      }
+    }
+
+    nav {
+      grid-area: nav-menu;
+    }
+
+    .title {
+      grid-area: title;
+      word-wrap: break-word;
+      max-width: 580px;
+
+      h1 {
+        font-size: 4rem;
+        line-height: 4.5rem;
+      }
+    }
+  }
+}

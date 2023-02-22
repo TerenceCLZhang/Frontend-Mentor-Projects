@@ -1,0 +1,68 @@
+@import "./cssReset";
+@import "./variables";
+@import "./headerStyles";
+@import "./mainStyles";
+@import "./footerStyles";
+@import "./effects";
+
+h1,
+h2,
+h3 {
+  font-family: $ff-headers;
+  font-weight: $fw-headers;
+  word-wrap: break-word;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  text-align: center;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  color: $white;
+  width: 150px;
+}
+
+a,
+p {
+  font-family: $ff-text;
+  font-weight: $fw-text;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+nav,
+footer {
+  background-color: $black;
+}
+
+body {
+  font-size: $fs;
+}
+
+* {
+  transition: 0.25s all;
+}
+
+@media (min-width: 50em) {
+  h2 {
+    font-size: 3rem;
+    line-height: 3rem;
+    text-align: left;
+  }
+
+  h3 {
+    font-size: 2vw;
+    line-height: 2.25rem;
+    width: 12vw;
+  }
+}

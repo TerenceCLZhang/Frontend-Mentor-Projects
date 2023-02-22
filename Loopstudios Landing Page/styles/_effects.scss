@@ -1,0 +1,19 @@
+.underline-hover-effect {
+  display: inline-block;
+  padding-bottom: 0.35rem;
+  position: relative;
+}
+.underline-hover-effect::before {
+  content: "";
+  position: absolute;
+  left: 10%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: $white;
+  transition: width 0.25s ease-out;
+}
+
+.underline-hover-effect:hover::before {
+  width: 80%;
+}

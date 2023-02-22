@@ -1,0 +1,443 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#nav-bar {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 2rem 2.2rem;
+  flex-direction: column;
+  gap: 5rem;
+}
+#nav-bar .nav-header {
+  display: flex;
+  justify-content: space-between;
+}
+#nav-bar .nav-header > img {
+  width: 130px;
+}
+#nav-bar .nav-options {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+#nav-bar .nav-options .link-wrapper a {
+  color: hsl(0deg, 0%, 100%);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+}
+
+@media (min-width: 50em) {
+  #nav-bar {
+    background-color: transparent;
+    position: static;
+  }
+  #nav-bar .nav-header {
+    display: none;
+  }
+  #nav-bar .nav-options {
+    flex-direction: row;
+    justify-self: right;
+  }
+  #nav-bar .nav-options .link-wrapper a {
+    font-size: 15px;
+    font-family: "Alata", sans-serif;
+    font-weight: 400;
+  }
+}
+header {
+  background-image: url("../images/mobile/image-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10rem;
+}
+header .header-content {
+  padding: 2rem 2.2rem 0 2.2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header .header-content > img {
+  width: 130px;
+  height: auto;
+}
+header .title {
+  padding: 0 2.2rem 10rem 2.2rem;
+}
+header .title h1 {
+  color: hsl(0deg, 0%, 100%);
+  text-transform: uppercase;
+  border: 2px solid hsl(0deg, 0%, 100%);
+  padding: 1rem;
+  font-size: 2.45rem;
+  line-height: 3rem;
+}
+
+@media (min-width: 50em) {
+  header {
+    background-image: url("../images/desktop/image-hero.jpg");
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "logo nav-menu" "title title";
+    padding: 5rem 10rem 10rem 10rem;
+  }
+  header > * {
+    padding: 0 !important;
+  }
+  header .header-content {
+    grid-area: logo;
+  }
+  header .header-content #open-nav {
+    display: none;
+  }
+  header .header-content > img {
+    width: 15vw;
+  }
+  header nav {
+    grid-area: nav-menu;
+  }
+  header .title {
+    grid-area: title;
+    word-wrap: break-word;
+    max-width: 580px;
+  }
+  header .title h1 {
+    font-size: 4rem;
+    line-height: 4.5rem;
+  }
+}
+main {
+  padding: 4rem 2.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .introduction {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+main .introduction .introduction-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+main .all-creations {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+main .all-creations .creations {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .all-creations .creations .creation {
+  position: relative;
+}
+main .all-creations .creations .creation img {
+  filter: brightness(60%);
+  z-index: 1;
+}
+main .all-creations .creations .creation h3 {
+  position: absolute;
+  bottom: 5px;
+  left: 15px;
+  z-index: 2;
+}
+main .all-creations .creations .creation:hover {
+  opacity: 50%;
+}
+main .see-all {
+  color: hsl(0deg, 0%, 0%);
+  border: 2px solid hsl(0deg, 0%, 0%);
+  padding: 0.5rem 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  margin: 0 auto;
+}
+main .see-all:hover {
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0deg, 0%, 0%);
+}
+
+@media (min-width: 50em) {
+  main {
+    padding: 10rem 10rem;
+  }
+  main .introduction {
+    position: relative;
+    width: 100%;
+    max-width: 1120px;
+    height: 625px;
+  }
+  main .introduction picture img {
+    margin: auto 0;
+    width: 50vw;
+    max-width: 750px;
+  }
+  main .introduction .introduction-content {
+    position: absolute;
+    background-color: hsl(0deg, 0%, 100%);
+    text-align: left;
+    bottom: 0;
+    right: 0;
+    padding: min(8.75rem, 9vw) 0 min(8.75rem, 9vw) min(8.75rem, 9vw);
+    width: 45vw;
+    max-width: 600px;
+    gap: 2rem;
+  }
+  main .introduction .introduction-content p {
+    color: hsl(0deg, 0%, 55%);
+  }
+  .all-creations {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "header btn" "creations creations";
+    width: 100%;
+  }
+  .all-creations h2 {
+    grid-area: header;
+  }
+  .all-creations .creations {
+    grid-area: creations;
+    display: grid !important;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 2rem !important;
+  }
+  .all-creations .creations .creation picture img {
+    width: 100%;
+  }
+  .all-creations .creations .creation h3 {
+    bottom: 2vh !important;
+    left: 2vw !important;
+  }
+  .all-creations .see-all {
+    grid-area: btn;
+    margin: 0 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+footer {
+  padding: 2rem 2.2rem 2rem 2.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  text-align: center;
+  color: hsl(0deg, 0%, 41%);
+}
+footer > img {
+  width: 130px;
+}
+footer .extra-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+footer .extra-links > a {
+  display: block;
+  color: hsl(0deg, 0%, 100%);
+  text-decoration: none;
+}
+footer .social-media {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -1.5rem;
+}
+
+@media (min-width: 50em) {
+  footer {
+    padding: 5rem 10rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "logo social-media" "links copyright";
+    gap: 1.5rem;
+  }
+  footer > img {
+    grid-area: logo;
+    width: 15vw;
+  }
+  footer .extra-links {
+    grid-area: links;
+    flex-direction: row;
+  }
+  footer .social-media {
+    grid-area: social-media;
+    align-self: center;
+    justify-self: flex-end;
+    margin: 0;
+  }
+  footer .copyright {
+    grid-area: copyright;
+    justify-self: flex-end;
+  }
+}
+.underline-hover-effect {
+  display: inline-block;
+  padding-bottom: 0.35rem;
+  position: relative;
+}
+
+.underline-hover-effect::before {
+  content: "";
+  position: absolute;
+  left: 10%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: hsl(0deg, 0%, 100%);
+  transition: width 0.25s ease-out;
+}
+
+.underline-hover-effect:hover::before {
+  width: 80%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  word-wrap: break-word;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  text-align: center;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  color: hsl(0deg, 0%, 100%);
+  width: 150px;
+}
+
+a,
+p {
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+nav,
+footer {
+  background-color: hsl(0deg, 0%, 0%);
+}
+
+body {
+  font-size: 15px;
+}
+
+* {
+  transition: 0.25s all;
+}
+
+@media (min-width: 50em) {
+  h2 {
+    font-size: 3rem;
+    line-height: 3rem;
+    text-align: left;
+  }
+  h3 {
+    font-size: 2vw;
+    line-height: 2.25rem;
+    width: 12vw;
+  }
+}/*# sourceMappingURL=main.css.map */

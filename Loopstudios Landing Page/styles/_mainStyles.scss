@@ -1,0 +1,146 @@
+main {
+  padding: $padding-top-bottom-main-mobile $padding-left-right-page-mobile;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .introduction {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 5rem;
+
+    .introduction-content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+    }
+  }
+
+  .all-creations {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+
+    .creations {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      .creation {
+        position: relative;
+
+        img {
+          filter: brightness(60%);
+          z-index: 1;
+        }
+
+        h3 {
+          position: absolute;
+          bottom: 5px;
+          left: 15px;
+          z-index: 2;
+        }
+      }
+
+      .creation:hover {
+        opacity: 50%;
+      }
+    }
+  }
+
+  .see-all {
+    color: $black;
+    border: 2px solid $black;
+    padding: 0.5rem 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    margin: 0 auto;
+  }
+
+  .see-all:hover {
+    color: $white;
+    background-color: $black;
+  }
+}
+
+@media (min-width: 50em) {
+  main {
+    padding: $padding-top-bottom-main-desktop $padding-left-right-page-desktop;
+
+    .introduction {
+      position: relative;
+      width: 100%;
+      max-width: 1120px;
+      height: 625px;
+
+      picture {
+        img {
+          margin: auto 0;
+          width: 50vw;
+          max-width: 750px;
+        }
+      }
+
+      .introduction-content {
+        position: absolute;
+        background-color: $white;
+        text-align: left;
+        bottom: 0;
+        right: 0;
+        padding: min(8.75rem, 9vw) 0 min(8.75rem, 9vw) min(8.75rem, 9vw);
+        width: 45vw;
+        max-width: 600px;
+        gap: 2rem;
+
+        p {
+          color: $dark-gray;
+        }
+      }
+    }
+  }
+
+  .all-creations {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "header btn" "creations creations";
+    width: 100%;
+
+    h2 {
+      grid-area: header;
+    }
+
+    .creations {
+      grid-area: creations;
+      display: grid !important;
+      grid-template-columns: auto auto auto auto;
+      grid-template-rows: auto auto;
+      gap: 2rem !important;
+
+      .creation {
+        picture {
+          img {
+            width: 100%;
+          }
+        }
+
+        h3 {
+          bottom: 2vh !important;
+          left: 2vw !important;
+        }
+      }
+    }
+
+    .see-all {
+      grid-area: btn;
+      margin: 0 0 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
