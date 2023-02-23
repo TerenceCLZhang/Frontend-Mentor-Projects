@@ -15,7 +15,7 @@ fetch("./data.json")
 
       statistic.classList.add(category.toLowerCase());
       statistic.querySelector("img").setAttribute("src", icon);
-      statistic.querySelector("#number").textContent = score;
+      statistic.querySelector(".number").textContent = score;
     });
   })
   .catch((error) => console.error(error));
