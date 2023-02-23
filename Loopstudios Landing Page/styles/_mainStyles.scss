@@ -10,11 +10,18 @@ main {
     gap: 2rem;
     margin-bottom: 5rem;
 
+    picture {
+      img {
+        margin: 0 auto;
+      }
+    }
+
     .introduction-content {
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
       text-align: center;
+      align-self: center;
     }
   }
 
@@ -70,12 +77,58 @@ main {
 @media (min-width: 50em) {
   main {
     padding: $padding-top-bottom-main-desktop $padding-left-right-page-desktop;
+    gap: 7rem;
 
+    .all-creations {
+      display: grid !important;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      grid-template-areas: "header btn" "creations creations";
+      width: 100%;
+
+      h2 {
+        grid-area: header;
+      }
+
+      .creations {
+        grid-area: creations;
+        display: grid !important;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto auto;
+        gap: 2rem !important;
+
+        .creation {
+          picture {
+            img {
+              width: 100%;
+            }
+          }
+
+          h3 {
+            bottom: 2vh !important;
+            left: 2vw !important;
+          }
+        }
+      }
+
+      .see-all {
+        grid-area: btn;
+        margin: 0 0 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media (min-width: 75em) {
+  main {
     .introduction {
       position: relative;
       width: 100%;
       max-width: 1120px;
-      height: 625px;
+      max-height: 500px;
 
       picture {
         img {
@@ -91,7 +144,7 @@ main {
         text-align: left;
         bottom: 0;
         right: 0;
-        padding: min(8.75rem, 9vw) 0 min(8.75rem, 9vw) min(8.75rem, 9vw);
+        padding: min(8.75rem, 9vw) 0 0 min(8.75rem, 9vw);
         width: 45vw;
         max-width: 600px;
         gap: 2rem;
@@ -100,47 +153,6 @@ main {
           color: $dark-gray;
         }
       }
-    }
-  }
-
-  .all-creations {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas: "header btn" "creations creations";
-    width: 100%;
-
-    h2 {
-      grid-area: header;
-    }
-
-    .creations {
-      grid-area: creations;
-      display: grid !important;
-      grid-template-columns: auto auto auto auto;
-      grid-template-rows: auto auto;
-      gap: 2rem !important;
-
-      .creation {
-        picture {
-          img {
-            width: 100%;
-          }
-        }
-
-        h3 {
-          bottom: 2vh !important;
-          left: 2vw !important;
-        }
-      }
-    }
-
-    .see-all {
-      grid-area: btn;
-      margin: 0 0 0 auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
   }
 }

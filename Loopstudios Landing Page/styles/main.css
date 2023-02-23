@@ -217,11 +217,15 @@ main .introduction {
   gap: 2rem;
   margin-bottom: 5rem;
 }
+main .introduction picture img {
+  margin: 0 auto;
+}
 main .introduction .introduction-content {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   text-align: center;
+  align-self: center;
 }
 main .all-creations {
   display: flex;
@@ -267,12 +271,46 @@ main .see-all:hover {
 @media (min-width: 50em) {
   main {
     padding: 10rem 10rem;
+    gap: 7rem;
   }
+  main .all-creations {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "header btn" "creations creations";
+    width: 100%;
+  }
+  main .all-creations h2 {
+    grid-area: header;
+  }
+  main .all-creations .creations {
+    grid-area: creations;
+    display: grid !important;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 2rem !important;
+  }
+  main .all-creations .creations .creation picture img {
+    width: 100%;
+  }
+  main .all-creations .creations .creation h3 {
+    bottom: 2vh !important;
+    left: 2vw !important;
+  }
+  main .all-creations .see-all {
+    grid-area: btn;
+    margin: 0 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 75em) {
   main .introduction {
     position: relative;
     width: 100%;
     max-width: 1120px;
-    height: 625px;
+    max-height: 500px;
   }
   main .introduction picture img {
     margin: auto 0;
@@ -285,44 +323,13 @@ main .see-all:hover {
     text-align: left;
     bottom: 0;
     right: 0;
-    padding: min(8.75rem, 9vw) 0 min(8.75rem, 9vw) min(8.75rem, 9vw);
+    padding: min(8.75rem, 9vw) 0 0 min(8.75rem, 9vw);
     width: 45vw;
     max-width: 600px;
     gap: 2rem;
   }
   main .introduction .introduction-content p {
     color: hsl(0deg, 0%, 55%);
-  }
-  .all-creations {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas: "header btn" "creations creations";
-    width: 100%;
-  }
-  .all-creations h2 {
-    grid-area: header;
-  }
-  .all-creations .creations {
-    grid-area: creations;
-    display: grid !important;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto;
-    gap: 2rem !important;
-  }
-  .all-creations .creations .creation picture img {
-    width: 100%;
-  }
-  .all-creations .creations .creation h3 {
-    bottom: 2vh !important;
-    left: 2vw !important;
-  }
-  .all-creations .see-all {
-    grid-area: btn;
-    margin: 0 0 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }
 footer {
