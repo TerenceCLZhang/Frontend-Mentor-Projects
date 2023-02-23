@@ -1,0 +1,37 @@
+@import "./cssReset";
+@import "./varaibles";
+@import "./results";
+@import "./summary";
+
+body {
+  font-family: $ff;
+  font-size: $fs-paragraph;
+  font-weight: $fw-normal;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: $media-width) {
+  main {
+    flex-direction: row;
+    width: 55%;
+    justify-self: center;
+    align-self: center;
+    border-radius: $border-radius;
+    box-shadow: 0 0 20px 20px $pale-blue;
+  }
+
+  .results {
+    width: $desktop-results-width;
+  }
+
+  .summary {
+    width: 100% - $desktop-results-width;
+  }
+}

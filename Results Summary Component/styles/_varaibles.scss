@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "Hanken Grotesk", sans-serif;
+  src: url("../assets/fonts/HankenGrotesk-VariableFont_wght.ttf")
+      format("truetype"),
+    url("../assets/fonts/static/HankenGrotesk-Medium.ttf") format("truetype"),
+    url("../assets/fonts/static/HankenGrotesk-Bold.ttf") format("truetype"),
+    url("../assets/fonts/static/HankenGrotesk-ExtraBold.ttf") format("truetype");
+  font-weight: 500 700 800;
+  font-style: normal;
+}
+
+$light-red: hsl(0, 100%, 67%);
+$orangey-yellow: hsl(39, 100%, 56%);
+$green-teal: hsl(166, 100%, 37%);
+$cobalt-blue: hsl(234, 85%, 45%);
+
+$background-percentage: 15%;
+$light-red-background: hsla(0, 100%, 67%, $background-percentage);
+$orangey-yellow-background: hsla(39, 100%, 56%, $background-percentage);
+$green-teal-background: hsla(166, 100%, 37%, $background-percentage);
+$cobalt-blue-background: hsla(234, 85%, 45%, $background-percentage);
+
+$light-state-blue: hsl(252, 100%, 67%);
+$light-royal-blue: hsl(241, 81%, 54%);
+
+$violet-blue: hsla(256, 72%, 46%, 1);
+$persian-blue: hsla(241, 72%, 46%, 0);
+
+$white: hsl(0, 0%, 100%);
+$pale-blue: hsl(221, 100%, 96%);
+$light-lavender: hsl(241, 100%, 89%);
+$dark-gray-blue: hsl(224, 30%, 27%);
+$dark-gray-blue-lighter: hsla(224, 30%, 27%, 70%);
+
+$fs-paragraph: 18px;
+$ff: "Hanken Grotesk", sans-serif;
+$fw-normal: 500;
+$fw-bold: 700;
+$fw-extra-bold: 800;
+
+$padding-mobile: 2rem;
+$padding-desktop: 2rem 4rem;
+$width-height-result-mobile: 10rem;
+$width-height-result-desktop: 13rem;
+
+$padding-statistics: 1rem;
+
+$media-width: 50em;
+
+$desktop-results-width: 45%;
+
+$border-radius: 2rem;

@@ -1,0 +1,18 @@
+button {
+  background: $dark-gray-blue;
+  color: $white;
+  border: none;
+  border-radius: 2rem;
+  padding: $padding-statistics;
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient($light-state-blue, $light-royal-blue);
+}
+
+@media (min-width: $media-width) {
+  button {
+    align-self: end;
+  }
+}

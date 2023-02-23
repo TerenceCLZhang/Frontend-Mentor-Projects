@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <main>
+      <div class="results">
+        <p>Your Result</p>
+        <p class="result-circle"><span class="result">76</span>&nbsp;of 100</p>
+        <div class="result-info">
+          <h1>Great</h1>
+          <p>
+            You scored higher than 65% of the people who have taken these tests.
+          </p>
+        </div>
+      </div>
+
+      <div class="summary">
+        <h2>Summary</h2>
+
+        <div class="statistics">
+          <div class="statistic reaction">
+            <div class="stat-header">
+              <img src="" alt="reaction icon" />
+              <h3>Reaction</h3>
+            </div>
+            <p class="stat"><span id="number"></span> / 100</p>
+          </div>
+          <div class="statistic memory">
+            <div class="stat-header">
+              <img src="" alt="memory icon" />
+              <h3>Memory</h3>
+            </div>
+            <p class="stat"><span id="number"></span> / 100</p>
+          </div>
+          <div class="statistic verbal">
+            <div class="stat-header">
+              <img src="" alt="verbal icon" />
+              <h3>Verbal</h3>
+            </div>
+            <p class="stat"><span id="number"></span> / 100</p>
+          </div>
+          <div class="statistic visual">
+            <div class="stat-header">
+              <img src="" alt="visual icon" />
+              <h3>Visual</h3>
+            </div>
+            <p class="stat"><span id="number"></span> / 100</p>
+          </div>
+        </div>
+
+        <button>Continue</button>
+      </div>
+    </main>
+
+    <script src="scripts/LoadResults.js"></script>
+  </body>
+</html>
