@@ -74,10 +74,11 @@ h6 {
 #nav-bar {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   padding: 2rem 2.2rem;
   flex-direction: column;
   gap: 5rem;
+  z-index: 2;
 }
 #nav-bar .nav-header {
   display: flex;
@@ -104,6 +105,8 @@ h6 {
   #nav-bar {
     background-color: transparent;
     position: static;
+    width: auto;
+    height: auto;
   }
   #nav-bar .nav-header {
     display: none;
@@ -111,11 +114,17 @@ h6 {
   #nav-bar .nav-options {
     flex-direction: row;
     justify-self: right;
+    gap: 1rem;
   }
   #nav-bar .nav-options .link-wrapper a {
     font-size: 15px;
     font-family: "Alata", sans-serif;
     font-weight: 400;
+  }
+}
+@media (min-width: 75em) {
+  #nav-bar .nav-options {
+    gap: 2rem;
   }
 }
 .mobile-background {
