@@ -1,0 +1,34 @@
+.upper-main {
+  border-radius: $border-radius;
+  border-top-right-radius: 5rem;
+  display: flex;
+  align-items: center;
+
+  .upper-main-container {
+    & > img {
+      margin-bottom: 2rem;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1rem;
+
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $very-dark-blue;
+        border: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 0.5rem;
+      }
+    }
+  }
+}
+
+@media (min-width: $min-width-dekstop) {
+  .upper-main {
+    height: 12rem;
+  }
+}
