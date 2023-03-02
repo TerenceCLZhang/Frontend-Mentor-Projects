@@ -1,0 +1,51 @@
+footer {
+  background-color: $footer;
+  padding: $card-padding;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  svg {
+    color: $footer-text;
+    margin: 0 auto;
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      text-decoration: none;
+      color: $footer-text;
+      font-size: 1.15rem;
+    }
+
+    a:hover {
+      color: $white;
+    }
+  }
+
+  .social-media {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    svg {
+      color: #2c7566;
+    }
+
+    svg:hover {
+      color: $white;
+    }
+  }
+}
+
+@media (min-width: $min-desktop-width) {
+  footer {
+    .links {
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 1rem;
+    }
+  }
+}

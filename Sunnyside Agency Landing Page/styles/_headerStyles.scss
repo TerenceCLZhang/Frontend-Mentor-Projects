@@ -1,0 +1,72 @@
+@import "./navBar";
+
+header {
+  background-image: url("../images/mobile/image-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  padding: $card-padding;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(auto, 3);
+  grid-template-areas: "logo top-right" "title title" "arrow arrow";
+  row-gap: 2rem;
+  padding-bottom: 8rem;
+
+  .logo {
+    grid-area: logo;
+  }
+
+  #open-close {
+    grid-area: top-right;
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-self: flex-end;
+    cursor: pointer;
+    padding: 0;
+
+    svg {
+      color: $white;
+    }
+  }
+
+  .grayed {
+    svg {
+      opacity: 50%;
+    }
+  }
+
+  h1 {
+    grid-area: title;
+    text-align: center;
+    color: $white;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    font-weight: $fw-extra-bold;
+    margin-top: 2rem;
+  }
+
+  .arrow {
+    grid-area: arrow;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $min-desktop-width) {
+  header {
+    background-image: url("../images/desktop/image-header.jpg");
+    row-gap: 5rem;
+    padding-bottom: 22vw;
+
+    #open-close {
+      display: none;
+    }
+
+    h1 {
+      text-transform: uppercase;
+      letter-spacing: 1rem;
+    }
+  }
+}
