@@ -202,6 +202,9 @@ header .arrow {
     row-gap: 5rem;
     padding-bottom: 22vw;
   }
+  header .logo {
+    width: 200px;
+  }
   header #open-close {
     display: none;
   }
