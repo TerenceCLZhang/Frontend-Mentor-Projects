@@ -1,0 +1,143 @@
+.features {
+  & > picture > img {
+    width: 100%;
+  }
+
+  .feature-content {
+    padding: $card-padding;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+
+    h2 {
+      font-weight: $fw-extra-bold;
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+
+    p {
+      color: $very-dark-grayish-blue;
+    }
+
+    a {
+      text-transform: uppercase;
+      font-family: $ff-headers;
+      font-weight: $fw-extra-bold;
+      position: relative;
+      text-decoration: none;
+      max-width: fit-content;
+      padding-left: 1rem;
+    }
+
+    a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: calc(100% + 1rem);
+      height: 6px;
+      border: none;
+      border-bottom-width: 0.5rem;
+      border-bottom-style: solid;
+      border-radius: 6px;
+      z-index: -1;
+    }
+
+    a.transform::after {
+      border-color: $soft-yellow;
+    }
+
+    a.transform:hover:after {
+      border-color: $yellow;
+    }
+
+    a.stand-out::after {
+      border-color: $softer-red;
+    }
+
+    a.stand-out:hover::after {
+      border-color: $soft-red;
+    }
+  }
+
+  .other-features {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: $card-padding;
+    padding-top: 90vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+
+    h3 {
+      font-size: 1.75rem;
+    }
+  }
+
+  .graphic-design {
+    background-image: url("../images/mobile/image-graphic-design.jpg");
+    color: $graphic-design-text;
+  }
+
+  .photography {
+    background-image: url("../images/mobile/image-photography.jpg");
+    color: $photography-text;
+  }
+}
+
+@media (min-width: $min-desktop-width) {
+  .features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "transform-content transform-img"
+      "stand-out-img stand-out-content"
+      "graphic-design photography";
+
+    .div:nth-of-type(1) {
+      grid-area: transform-content;
+    }
+
+    picture:nth-of-type(1) {
+      grid-area: transform-img;
+    }
+
+    img {
+      height: 100%;
+    }
+
+    & > div {
+      padding: $card-padding-desktop !important;
+    }
+
+    .feature-content {
+      text-align: left !important;
+      justify-content: center;
+
+      h2 {
+        font-size: 2.2rem;
+        line-height: 2.75rem;
+      }
+    }
+
+    .other-features {
+      justify-content: flex-end;
+      text-align: center !important;
+      padding-bottom: 5rem !important;
+      padding-left: 12rem !important;
+      padding-right: 12rem !important;
+    }
+
+    .graphic-design {
+      background-image: url("../images/desktop/image-graphic-design.jpg");
+    }
+
+    .photography {
+      background-image: url("../images/desktop/image-photography.jpg");
+    }
+  }
+}
