@@ -240,6 +240,7 @@ header .arrow {
   max-width: -moz-fit-content;
   max-width: fit-content;
   padding-left: 1rem;
+  align-self: center;
 }
 .features .feature-content a::after {
   content: "";
@@ -271,7 +272,6 @@ header .arrow {
   background-size: cover;
   background-position: center;
   padding: 2.5rem;
-  padding-top: 90vw;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -279,6 +279,7 @@ header .arrow {
 }
 .features .other-features h3 {
   font-size: 1.75rem;
+  margin-top: 20rem;
 }
 .features .graphic-design {
   background-image: url("../images/mobile/image-graphic-design.jpg");
@@ -289,7 +290,7 @@ header .arrow {
   color: hsl(198, 62%, 26%);
 }
 
-@media (min-width: 50em) {
+@media (min-width: 65em) {
   .features {
     display: grid;
     grid-template-columns: 1fr 1fr;

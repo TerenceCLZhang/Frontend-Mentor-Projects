@@ -28,6 +28,7 @@
       text-decoration: none;
       max-width: fit-content;
       padding-left: 1rem;
+      align-self: center;
     }
 
     a::after {
@@ -66,7 +67,6 @@
     background-size: cover;
     background-position: center;
     padding: $card-padding;
-    padding-top: 90vw;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -74,6 +74,7 @@
 
     h3 {
       font-size: 1.75rem;
+      margin-top: 20rem;
     }
   }
 
@@ -88,7 +89,7 @@
   }
 }
 
-@media (min-width: $min-desktop-width) {
+@media (min-width: 65em) {
   .features {
     display: grid;
     grid-template-columns: 1fr 1fr;
