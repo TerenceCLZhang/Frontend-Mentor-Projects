@@ -278,11 +278,11 @@ header .arrow {
   font-size: 1.75rem;
 }
 .features .graphic-design {
-  background-image: url("/Sunnyside Agency Landing Page/images/desktop/image-graphic-design.jpg");
+  background-image: url("../images/mobile/image-graphic-design.jpg");
   color: hsl(167, 40%, 24%);
 }
 .features .photography {
-  background-image: url("/Sunnyside Agency Landing Page/images/desktop/image-photography.jpg");
+  background-image: url("../images/mobile/image-photography.jpg");
   color: hsl(198, 62%, 26%);
 }
 
@@ -321,10 +321,10 @@ header .arrow {
     padding-right: 12rem !important;
   }
   .features .graphic-design {
-    background-image: url("/Sunnyside Agency Landing Page/images/desktop/image-graphic-design.jpg");
+    background-image: url("../images/desktop/image-graphic-design.jpg");
   }
   .features .photography {
-    background-image: url("/Sunnyside Agency Landing Page/images/desktop/image-photography.jpg");
+    background-image: url("../images/desktop/image-photography.jpg");
   }
 }
 .testimonials {
