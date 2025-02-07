@@ -1,4 +1,4 @@
 # Frontend-Mentor-Projects
 My solutions for the Frontend Mentor Challenges.
 
-https://tyranties.github.io/Frontend-Mentor-Projects/
+[Link to Project Pages](https://terenceclzhang.github.io/Frontend-Mentor-Projects/)
